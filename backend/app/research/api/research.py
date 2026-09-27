@@ -1,0 +1,1 @@
+from app.research.api.routes import router
