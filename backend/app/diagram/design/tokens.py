@@ -1,37 +1,48 @@
-from dataclasses import dataclass
+from __future__ import annotations
 
-@dataclass
-class DiagramTheme:
-    paper: str
-    paper_2: str
-    ink: str
-    muted: str
-    accent: str
-    link: str
-    title_font: str = "Inter, sans-serif"
-    body_font: str = "Inter, sans-serif"
-    mono_font: str = "ui-monospace, monospace"
+from dataclasses import dataclass, field
 
-    def to_css_variables(self) -> str:
-        return f"""
-        :root {{
-            --paper: {self.paper};
-            --paper-2: {self.paper_2};
-            --ink: {self.ink};
-            --muted: {self.muted};
-            --accent: {self.accent};
-            --link: {self.link};
-            --title-font: {self.title_font};
-            --body-font: {self.body_font};
-            --mono-font: {self.mono_font};
-        }}
-        """
 
-DEFAULT_THEME = DiagramTheme(
-    paper="#f8f6f0",
-    paper_2="#ffffff",
-    ink="#111111",
-    muted="#6b6b68",
-    accent="#c73a2b",
-    link="#2463a8",
-)
+@dataclass(frozen=True)
+class ColorTokens:
+    background: str = "#FFFFFF"
+    surface: str = "#F8FAFC"
+    text: str = "#0F172A"
+    muted_text: str = "#64748B"
+    border: str = "#CBD5E1"
+    primary: str = "#2563EB"
+    secondary: str = "#7C3AED"
+    success: str = "#16A34A"
+    warning: str = "#D97706"
+    danger: str = "#DC2626"
+
+
+@dataclass(frozen=True)
+class SpacingTokens:
+    xs: int = 4
+    sm: int = 8
+    md: int = 16
+    lg: int = 24
+    xl: int = 32
+    xxl: int = 48
+
+
+@dataclass(frozen=True)
+class RadiusTokens:
+    sm: int = 4
+    md: int = 8
+    lg: int = 12
+    pill: int = 999
+
+
+@dataclass(frozen=True)
+class DesignTokens:
+    colors: ColorTokens = field(
+        default_factory=ColorTokens
+    )
+    spacing: SpacingTokens = field(
+        default_factory=SpacingTokens
+    )
+    radius: RadiusTokens = field(
+        default_factory=RadiusTokens
+    )

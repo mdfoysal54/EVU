@@ -1,32 +1,90 @@
-from abc import ABC, abstractmethod
-from dataclasses import dataclass
-from typing import Dict, Tuple
-from app.diagram.models import DiagramIR, DiagramOutputSpec
+from __future__ import annotations
+
+from dataclasses import dataclass, field
+from typing import Any
+
+from ..ir import DiagramIR
 
 
 @dataclass
-class NodeGeometry:
-    x: int
-    y: int
-    width: int
-    height: int
+class Point:
+    x: float
+    y: float
+
+
+@dataclass
+class Size:
+    width: float
+    height: float
+
+
+@dataclass
+class NodePosition:
+    node_id: str
+    position: Point
+    size: Size
+
+    @property
+    def x(self) -> float:
+        return self.position.x
+
+    @property
+    def y(self) -> float:
+        return self.position.y
+
+    @property
+    def width(self) -> float:
+        return self.size.width
+
+    @property
+    def height(self) -> float:
+        return self.size.height
 
 
 @dataclass
 class LayoutResult:
-    node_boxes: Dict[str, NodeGeometry]
-    canvas_width: int
-    canvas_height: int
+    width: float
+    height: float
+    nodes: dict[str, NodePosition] = field(default_factory=dict)
+    metadata: dict[str, Any] = field(default_factory=dict)
+
+    def get(self, node_id: str) -> NodePosition | None:
+        return self.nodes.get(node_id)
 
 
-class BaseLayoutStrategy(ABC):
-    """Abstract strategy for placing nodes and routing edges into geometry."""
+class LayoutEngine:
+    """
+    Base interface for all diagram layouts.
+    """
 
-    @abstractmethod
-    def compute_layout(
+    name = "base"
+
+    def layout(
         self,
         diagram: DiagramIR,
-        output_spec: DiagramOutputSpec,
-        dimensions: Tuple[int, int],
+        **kwargs: Any,
     ) -> LayoutResult:
         raise NotImplementedError
+
+
+def estimate_node_size(
+    label: str,
+    *,
+    min_width: float = 120,
+    height: float = 56,
+) -> Size:
+    """
+    Simple text-based size estimation.
+
+    Renderers can later replace this with font-aware measurement.
+    """
+
+    width = max(
+        min_width,
+        min(360, len(label) * 8 + 36),
+    )
+
+    return Size(
+        width=float(width),
+        height=float(height),
+    )

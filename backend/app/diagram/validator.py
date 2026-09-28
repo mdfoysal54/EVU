@@ -1,36 +1,86 @@
-from app.diagram.models import DiagramIR
-from app.diagram.budget import complexity_budget
+from __future__ import annotations
 
-class ValidationError(Exception):
-    pass
+from dataclasses import dataclass, field
+
+from .ir import DiagramIR
+
+
+@dataclass
+class ValidationResult:
+    valid: bool
+    errors: list[str] = field(default_factory=list)
+    warnings: list[str] = field(default_factory=list)
+
 
 class DiagramValidator:
-    def validate(self, diagram: DiagramIR) -> bool:
-        self.validate_nodes(diagram)
-        self.validate_edges(diagram)
-        self.validate_complexity(diagram)
-        return True
+    def validate(self, diagram: DiagramIR) -> ValidationResult:
+        errors: list[str] = []
+        warnings: list[str] = []
 
-    def validate_nodes(self, diagram: DiagramIR):
-        node_ids = set()
-        for node in diagram.nodes:
-            if not node.id or not node.id.strip():
-                raise ValidationError("Node encountered with missing or empty ID.")
-            if node.id in node_ids:
-                raise ValidationError(f"Duplicate node ID detected: {node.id}")
-            node_ids.add(node.id)
+        node_ids = diagram.node_ids()
 
-    def validate_edges(self, diagram: DiagramIR):
-        valid_ids = {node.id for node in diagram.nodes}
-        for edge in diagram.edges:
-            if edge.source not in valid_ids:
-                raise ValidationError(f"Dangling edge: Source ID '{edge.source}' does not exist.")
-            if edge.target not in valid_ids:
-                raise ValidationError(f"Dangling edge: Target ID '{edge.target}' does not exist.")
+        if not diagram.id:
+            errors.append("Diagram ID is required.")
 
-    def validate_complexity(self, diagram: DiagramIR):
-        budget = complexity_budget(len(diagram.nodes), len(diagram.edges))
-        if budget["level"] == "split":
-            raise ValidationError(
-                f"Complexity limit exceeded ({budget['nodes']} nodes). Diagram must be partitioned into modular zones."
+        if not diagram.diagram_type:
+            errors.append("Diagram type is required.")
+
+        if not diagram.nodes:
+            errors.append("Diagram must contain at least one node.")
+
+        duplicate_ids = self._duplicates(
+            [node.id for node in diagram.nodes]
+        )
+
+        if duplicate_ids:
+            errors.append(
+                "Duplicate node IDs: "
+                + ", ".join(duplicate_ids)
             )
+
+        for edge in diagram.edges:
+            if edge.source not in node_ids:
+                errors.append(
+                    f"Edge source '{edge.source}' does not exist."
+                )
+
+            if edge.target not in node_ids:
+                errors.append(
+                    f"Edge target '{edge.target}' does not exist."
+                )
+
+        group_ids = {
+            group.id
+            for group in diagram.groups
+        }
+
+        for node in diagram.nodes:
+            if node.group_id and node.group_id not in group_ids:
+                warnings.append(
+                    f"Node '{node.id}' references unknown group "
+                    f"'{node.group_id}'."
+                )
+
+        if len(diagram.nodes) > 40:
+            warnings.append(
+                "Diagram contains more than 40 nodes and may become "
+                "difficult to render."
+            )
+
+        return ValidationResult(
+            valid=not errors,
+            errors=errors,
+            warnings=warnings,
+        )
+
+    @staticmethod
+    def _duplicates(values: list[str]) -> list[str]:
+        seen: set[str] = set()
+        duplicates: set[str] = set()
+
+        for value in values:
+            if value in seen:
+                duplicates.add(value)
+            seen.add(value)
+
+        return sorted(duplicates)

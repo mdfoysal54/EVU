@@ -1,36 +1,55 @@
-from typing import Dict, Tuple
-from app.diagram.models import DiagramIR, DiagramOutputSpec
-from app.diagram.layout.base import BaseLayoutStrategy, LayoutResult, NodeGeometry
+from __future__ import annotations
+
+from ..ir import DiagramIR
+from .base import (
+    LayoutEngine,
+    LayoutResult,
+    NodePosition,
+    Point,
+    estimate_node_size,
+)
 
 
-class SequenceLayoutStrategy(BaseLayoutStrategy):
-    """Positions actors horizontally along the top with vertical lifelines."""
+class SequenceLayout(LayoutEngine):
+    name = "sequence"
 
-    def compute_layout(
+    def layout(
         self,
         diagram: DiagramIR,
-        output_spec: DiagramOutputSpec,
-        dimensions: Tuple[int, int],
+        *,
+        participant_gap: float = 180,
+        margin: float = 50,
+        **kwargs,
     ) -> LayoutResult:
-        width, height = dimensions
-        count = len(diagram.nodes)
-        node_boxes: Dict[str, NodeGeometry] = {}
 
-        box_w, box_h = 120, 44
-        col_gap = width // (count + 1) if count > 0 else width // 2
+        positions: dict[str, NodePosition] = {}
 
-        for idx, node in enumerate(diagram.nodes):
-            cx = (idx + 1) * col_gap
-            cy = 60
-            node_boxes[node.id] = NodeGeometry(
-                x=cx - (box_w // 2),
-                y=cy - (box_h // 2),
-                width=box_w,
-                height=box_h,
+        x = margin
+        max_height = 250
+
+        for node in diagram.nodes:
+            size = estimate_node_size(
+                node.label,
+                min_width=140,
             )
 
+            positions[node.id] = NodePosition(
+                node_id=node.id,
+                position=Point(
+                    x,
+                    margin,
+                ),
+                size=size,
+            )
+
+            x += size.width + participant_gap
+
         return LayoutResult(
-            node_boxes=node_boxes,
-            canvas_width=width,
-            canvas_height=height,
+            width=max(x + margin, 500),
+            height=max_height,
+            nodes=positions,
+            metadata={
+                "layout": self.name,
+                "lifelines": True,
+            },
         )

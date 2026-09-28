@@ -1,66 +1,140 @@
+from __future__ import annotations
+
 from collections import defaultdict
-from typing import Dict, List, Tuple
-from app.diagram.models import DiagramIR, DiagramOutputSpec
-from app.diagram.layout.base import BaseLayoutStrategy, LayoutResult, NodeGeometry
+
+from ..ir import DiagramIR
+from .base import (
+    LayoutEngine,
+    LayoutResult,
+    NodePosition,
+    Point,
+    estimate_node_size,
+)
 
 
-class HierarchyLayoutStrategy(BaseLayoutStrategy):
-    """Calculates levels from graph edges and distributes nodes by layer."""
+class HierarchyLayout(LayoutEngine):
+    name = "hierarchy"
 
-    def compute_layout(
+    def layout(
         self,
         diagram: DiagramIR,
-        output_spec: DiagramOutputSpec,
-        dimensions: Tuple[int, int],
+        *,
+        level_gap: float = 110,
+        node_gap: float = 50,
+        margin: float = 50,
+        **kwargs,
     ) -> LayoutResult:
-        width, height = dimensions
-        box_w, box_h = 130, 46
-        node_boxes: Dict[str, NodeGeometry] = {}
 
-        # 1. Determine tree depths
-        incoming: Dict[str, int] = {node.id: 0 for node in diagram.nodes}
-        children: Dict[str, List[str]] = defaultdict(list)
+        children: dict[str, list[str]] = defaultdict(list)
+        incoming: dict[str, int] = {
+            node.id: 0
+            for node in diagram.nodes
+        }
+
         for edge in diagram.edges:
-            incoming[edge.target] = incoming.get(edge.target, 0) + 1
-            children[edge.source].append(edge.target)
+            if edge.source in incoming and edge.target in incoming:
+                children[edge.source].append(edge.target)
+                incoming[edge.target] += 1
 
-        roots = [nid for nid, deg in incoming.items() if deg == 0] or [diagram.nodes[0].id]
-        levels: Dict[int, List[str]] = defaultdict(list)
-        visited = set()
+        roots = [
+            node_id
+            for node_id, count in incoming.items()
+            if count == 0
+        ]
 
-        def dfs(node_id: str, depth: int):
-            if node_id in visited:
+        if not roots and diagram.nodes:
+            roots = [diagram.nodes[0].id]
+
+        levels: dict[str, int] = {}
+
+        def visit(node_id: str, level: int) -> None:
+            current = levels.get(node_id)
+
+            if current is not None and current >= level:
                 return
-            visited.add(node_id)
-            levels[depth].append(node_id)
-            for ch in children[node_id]:
-                dfs(ch, depth + 1)
+
+            levels[node_id] = level
+
+            for child in children[node_id]:
+                visit(child, level + 1)
 
         for root in roots:
-            dfs(root, 0)
+            visit(root, 0)
 
-        # Include orphan nodes on level 0
-        for n in diagram.nodes:
-            if n.id not in visited:
-                levels[0].append(n.id)
+        for node in diagram.nodes:
+            levels.setdefault(node.id, 0)
 
-        total_depth = len(levels)
-        y_step = height // (total_depth + 1 or 1)
+        grouped: dict[int, list[str]] = defaultdict(list)
 
-        for depth, nids in levels.items():
-            cy = (depth + 1) * y_step
-            x_step = width // (len(nids) + 1 or 1)
-            for idx, nid in enumerate(nids):
-                cx = (idx + 1) * x_step
-                node_boxes[nid] = NodeGeometry(
-                    x=cx - (box_w // 2),
-                    y=cy - (box_h // 2),
-                    width=box_w,
-                    height=box_h,
+        for node_id, level in levels.items():
+            grouped[level].append(node_id)
+
+        positions: dict[str, NodePosition] = {}
+
+        canvas_width = 0
+        canvas_height = 0
+
+        for level in sorted(grouped):
+            node_ids = grouped[level]
+
+            widths = []
+
+            for node_id in node_ids:
+                node = diagram.get_node(node_id)
+                if node:
+                    widths.append(
+                        estimate_node_size(node.label)
+                    )
+
+            total_width = sum(
+                size.width
+                for size in widths
+            )
+
+            if len(widths) > 1:
+                total_width += node_gap * (len(widths) - 1)
+
+            start_x = max(
+                margin,
+                (canvas_width - total_width) / 2,
+            )
+
+            y = margin + level * level_gap
+
+            x = start_x
+
+            for node_id in node_ids:
+                node = diagram.get_node(node_id)
+
+                if not node:
+                    continue
+
+                size = estimate_node_size(node.label)
+
+                positions[node_id] = NodePosition(
+                    node_id=node_id,
+                    position=Point(x, y),
+                    size=size,
+                )
+
+                x += size.width + node_gap
+
+                canvas_width = max(
+                    canvas_width,
+                    x + margin,
+                )
+
+                canvas_height = max(
+                    canvas_height,
+                    y + size.height + margin,
                 )
 
         return LayoutResult(
-            node_boxes=node_boxes,
-            canvas_width=width,
-            canvas_height=height,
+            width=max(canvas_width, 300),
+            height=max(canvas_height, 200),
+            nodes=positions,
+            metadata={
+                "layout": self.name,
+                "levels": levels,
+            },
         )

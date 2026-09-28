@@ -1,69 +1,101 @@
-from typing import Any, Dict
-from app.diagram.models import (
-    DiagramIR,
-    DiagramNode,
-    DiagramEdge,
-    DiagramFormat,
-    DiagramSize,
-)
-from app.diagram.validator import DiagramValidator
-from app.diagram.design.tokens import DEFAULT_THEME, DiagramTheme
-from app.diagram.renderers import SVGRenderer, HTMLRenderer, PNGRenderer
-from app.diagram.schemas import DiagramOutputSpec
+from __future__ import annotations
+
+from .models import DiagramRequestModel, DiagramResult
+from .planner import DiagramPlanner
+from .types import BUILDERS
+from .validator import DiagramValidator
 
 
-def generate_diagram_artifact(
-    diagram_ir_payload: Dict[str, Any], 
-    theme: DiagramTheme = DEFAULT_THEME,
-    output_spec: DiagramOutputSpec | None = None
-) -> str:
-    if output_spec is None:
-        output_spec = DiagramOutputSpec(
-            format=DiagramFormat.SVG,
-            size=DiagramSize.DOC_WIDE
+class DiagramService:
+    """
+    Main application service for EVU's diagram subsystem.
+
+    Pipeline:
+
+        prompt
+          ↓
+        planner
+          ↓
+        type selection
+          ↓
+        diagram builder
+          ↓
+        IR
+          ↓
+        validator
+          ↓
+        result
+    """
+
+    def __init__(
+        self,
+        planner: DiagramPlanner | None = None,
+        validator: DiagramValidator | None = None,
+    ) -> None:
+        self.planner = planner or DiagramPlanner()
+        self.validator = validator or DiagramValidator()
+
+    def generate(
+        self,
+        request: DiagramRequestModel,
+    ) -> DiagramResult:
+        plan = self.planner.plan(
+            request.prompt,
+            request.diagram_type,
         )
 
-    # 1. Parse into DiagramIR
-    nodes = [
-        DiagramNode(
-            id=n["id"],
-            label=n["label"],
-            kind=n.get("kind", "component"),
-            group=n.get("group"),
-            metadata=n.get("metadata", {})
+        builder = BUILDERS.get(plan.diagram_type)
+
+        if builder is None:
+            raise ValueError(
+                f"No builder registered for diagram type "
+                f"'{plan.diagram_type}'."
+            )
+
+        diagram = builder(
+            request.prompt,
+            request.title,
         )
-        for n in diagram_ir_payload.get("nodes", [])
-    ]
-    edges = [
-        DiagramEdge(
-            source=e["source"],
-            target=e["target"],
-            label=e.get("label"),
-            kind=e.get("kind", "directed"),
-            metadata=e.get("metadata", {})
+
+        diagram.direction = plan.direction
+
+        diagram.metadata.update(
+            {
+                "planner_confidence": plan.confidence,
+                "reasoning": plan.reasoning,
+            }
         )
-        for e in diagram_ir_payload.get("edges", [])
-    ]
 
-    ir = DiagramIR(
-        title=diagram_ir_payload.get("title", "Untitled Diagram"),
-        diagram_type=diagram_ir_payload.get("diagram_type", "architecture"),
-        nodes=nodes,
-        edges=edges,
-        groups=diagram_ir_payload.get("groups", []),
-        metadata=diagram_ir_payload.get("metadata", {})
-    )
+        validation = self.validator.validate(diagram)
 
-    # 2. Validation
-    validator = DiagramValidator()
-    validator.validate(ir)
+        if not validation.valid:
+            raise ValueError(
+                "Generated diagram failed validation: "
+                + "; ".join(validation.errors)
+            )
 
-    # 3. Dynamic Renderer Selection
-    if output_spec.format == DiagramFormat.HTML:
-        renderer = HTMLRenderer()
-    elif output_spec.format == DiagramFormat.PNG:
-        renderer = PNGRenderer()
-    else:
-        renderer = SVGRenderer()
+        return DiagramResult(
+            diagram=diagram,
+            plan=plan,
+            warnings=validation.warnings,
+        )
 
-    return renderer.render(ir, theme, output_spec)
+    def generate_from_prompt(
+        self,
+        prompt: str,
+        diagram_type: str | None = None,
+        title: str | None = None,
+    ) -> DiagramResult:
+        request = DiagramRequestModel(
+            prompt=prompt,
+            diagram_type=diagram_type,
+            title=title,
+        )
+
+        return self.generate(request)
+
+    def supported_types(self) -> list[str]:
+        return sorted(BUILDERS.keys())
+
+
+diagram_service = DiagramService()

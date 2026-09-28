@@ -1,37 +1,81 @@
-from typing import Tuple
-from app.diagram.models import DiagramIR, DiagramOutputSpec
-from app.diagram.layout.base import LayoutResult, NodeGeometry, BaseLayoutStrategy
-from app.diagram.layout.sequence import SequenceLayoutStrategy
-from app.diagram.layout.timeline import TimelineLayoutStrategy
-from app.diagram.layout.hierarchy import HierarchyLayoutStrategy
-from app.diagram.layout.grid import GridLayoutStrategy
+from __future__ import annotations
+
+from .base import (
+    LayoutEngine,
+    LayoutResult,
+    NodePosition,
+    Point,
+    Size,
+    estimate_node_size,
+)
+from .graph import GraphLayout
+from .grid import GridLayout
+from .hierarchy import HierarchyLayout
+from .sequence import SequenceLayout
+from .timeline import TimelineLayout
 
 
-class LayoutEngine:
-    """Dispatches semantic diagram types to deterministic geometric layouts."""
-
-    def __init__(self):
-        self.sequence_layout = SequenceLayoutStrategy()
-        self.timeline_layout = TimelineLayoutStrategy()
-        self.hierarchy_layout = HierarchyLayoutStrategy()
-        self.grid_layout = GridLayoutStrategy()
-
-    def layout(
-        self,
-        diagram: DiagramIR,
-        output_spec: DiagramOutputSpec,
-        dimensions: Tuple[int, int],
-    ) -> LayoutResult:
-        dtype = (diagram.diagram_type or "").lower()
-
-        if dtype == "sequence":
-            return self.sequence_layout.compute_layout(diagram, output_spec, dimensions)
-        if dtype in ("timeline", "gantt"):
-            return self.timeline_layout.compute_layout(diagram, output_spec, dimensions)
-        if dtype in ("tree", "org_chart", "hierarchy"):
-            return self.hierarchy_layout.compute_layout(diagram, output_spec, dimensions)
-
-        return self.grid_layout.compute_layout(diagram, output_spec, dimensions)
+LAYOUTS = {
+    "graph": GraphLayout,
+    "hierarchy": HierarchyLayout,
+    "sequence": SequenceLayout,
+    "timeline": TimelineLayout,
+    "grid": GridLayout,
+}
 
 
-__all__ = ["LayoutEngine", "LayoutResult", "NodeGeometry", "BaseLayoutStrategy"]
+def get_layout(name: str) -> LayoutEngine:
+    layout_class = LAYOUTS.get(name)
+
+    if layout_class is None:
+        raise ValueError(
+            f"Unknown diagram layout: {name}"
+        )
+
+    return layout_class()
+
+
+def select_layout(diagram_type: str) -> LayoutEngine:
+    mapping = {
+        "sequence": "sequence",
+        "timeline": "timeline",
+        "hierarchy": "hierarchy",
+        "tree": "hierarchy",
+        "uml": "graph",
+        "database": "graph",
+        "architecture": "graph",
+        "deployment": "graph",
+        "dependency": "graph",
+        "layers": "hierarchy",
+        "quadrant": "grid",
+        "flowchart": "graph",
+        "state": "graph",
+        "er": "graph",
+        "data_flow": "graph",
+        "swimlane": "graph",
+    }
+
+    layout_name = mapping.get(
+        diagram_type,
+        "graph",
+    )
+
+    return get_layout(layout_name)
+
+
+__all__ = [
+    "LayoutEngine",
+    "LayoutResult",
+    "NodePosition",
+    "Point",
+    "Size",
+    "GraphLayout",
+    "GridLayout",
+    "HierarchyLayout",
+    "SequenceLayout",
+    "TimelineLayout",
+    "LAYOUTS",
+    "get_layout",
+    "select_layout",
+    "estimate_node_size",
+]

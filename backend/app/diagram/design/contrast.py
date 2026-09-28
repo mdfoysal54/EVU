@@ -1,22 +1,71 @@
-import re
+from __future__ import annotations
 
-def _srgb_to_linear(c: float) -> float:
-    c = c / 255.0
-    return c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4
 
-def relative_luminance(hex_color: str) -> float:
-    clean_hex = hex_color.lstrip("#")
-    if len(clean_hex) == 3:
-        clean_hex = "".join([c * 2 for c in clean_hex])
-    r, g, b = [int(clean_hex[i:i+2], 16) for i in (0, 2, 4)]
-    return 0.2126 * _srgb_to_linear(r) + 0.7152 * _srgb_to_linear(g) + 0.0722 * _srgb_to_linear(b)
+def _hex_to_rgb(value: str) -> tuple[int, int, int]:
+    value = value.strip().lstrip("#")
 
-def contrast_ratio(foreground: str, background: str) -> float:
-    lum1 = relative_luminance(foreground)
-    lum2 = relative_luminance(background)
-    brightest = max(lum1, lum2)
-    darkest = min(lum1, lum2)
-    return (brightest + 0.05) / (darkest + 0.05)
+    if len(value) != 6:
+        raise ValueError(
+            f"Invalid color: {value}"
+        )
 
-def passes_wcag_aa(foreground: str, background: str) -> bool:
-    return contrast_ratio(foreground, background) >= 4.5
+    return (
+        int(value[0:2], 16),
+        int(value[2:4], 16),
+        int(value[4:6], 16),
+    )
+
+
+def relative_luminance(color: str) -> float:
+    rgb = _hex_to_rgb(color)
+
+    channels = []
+
+    for value in rgb:
+        channel = value / 255
+
+        if channel <= 0.03928:
+            channel /= 12.92
+        else:
+            channel = (
+                (channel + 0.055) / 1.055
+            ) ** 2.4
+
+        channels.append(channel)
+
+    return (
+        0.2126 * channels[0]
+        + 0.7152 * channels[1]
+        + 0.0722 * channels[2]
+    )
+
+
+def contrast_ratio(
+    foreground: str,
+    background: str,
+) -> float:
+
+    first = relative_luminance(foreground)
+    second = relative_luminance(background)
+
+    lighter = max(first, second)
+    darker = min(first, second)
+
+    return (lighter + 0.05) / (darker + 0.05)
+
+
+def passes_wcag_aa(
+    foreground: str,
+    background: str,
+    *,
+    large_text: bool = False,
+) -> bool:
+
+    ratio = contrast_ratio(
+        foreground,
+        background,
+    )
+
+    required = 3.0 if large_text else 4.5
+
+    return ratio >= required

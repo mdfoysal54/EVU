@@ -1,50 +1,63 @@
-from app.diagram.models import DiagramIR, DiagramOutputSpec
-from app.diagram.design.tokens import DiagramTheme
-from app.diagram.renderers import DiagramRenderer
-from app.diagram.renderers.svg import SVGRenderer
+from __future__ import annotations
+
+from html import escape
+
+from ..ir import DiagramIR
+from .svg import SVGRenderer
 
 
-class HTMLRenderer(DiagramRenderer):
-
-    def __init__(self):
-        self.svg_renderer = SVGRenderer()
+class HTMLRenderer:
+    name = "html"
 
     def render(
         self,
         diagram: DiagramIR,
-        theme: DiagramTheme,
-        output_spec: DiagramOutputSpec,
+        *,
+        svg: str | None = None,
+        title: str | None = None,
     ) -> str:
-        svg_content = self.svg_renderer.render(diagram, theme, output_spec)
+
+        svg_content = svg or SVGRenderer().render(
+            diagram
+        )
+
+        safe_title = escape(
+            title or diagram.title or "EVU Diagram"
+        )
 
         return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{diagram.title}</title>
-  <style>
-    body {{
-      margin: 0;
-      padding: 24px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: {theme.paper};
-      font-family: {theme.body_font};
-    }}
-    .diagram-wrapper {{
-      max-width: 100%;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      border-radius: 8px;
-      overflow: hidden;
-    }}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+<title>{safe_title}</title>
+<style>
+html, body {{
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family:
+        Inter, Arial, Helvetica, sans-serif;
+    background: #f8fafc;
+}}
+
+.diagram-container {{
+    padding: 32px;
+    overflow: auto;
+}}
+
+.diagram-container svg {{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}}
+</style>
 </head>
 <body>
-  <div class="diagram-wrapper">
-    {svg_content}
-  </div>
+<div class="diagram-container">
+{svg_content}
+</div>
 </body>
 </html>
 """

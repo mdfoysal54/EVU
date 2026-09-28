@@ -1,32 +1,42 @@
-import base64
-from app.diagram.models import DiagramIR, DiagramOutputSpec
-from app.diagram.design.tokens import DiagramTheme
-from app.diagram.renderers import DiagramRenderer
-from app.diagram.renderers.svg import SVGRenderer
+from __future__ import annotations
+
+from pathlib import Path
+
+from ..ir import DiagramIR
+from .svg import SVGRenderer
 
 
-class PNGRenderer(DiagramRenderer):
-
-    def __init__(self):
-        self.svg_renderer = SVGRenderer()
+class PNGRenderer:
+    name = "png"
 
     def render(
         self,
         diagram: DiagramIR,
-        theme: DiagramTheme,
-        output_spec: DiagramOutputSpec,
-    ) -> str:
-        """
-        Renders the SVG and converts it to a base64-encoded PNG string.
-        Requires cairosvg (`pip install cairosvg`).
-        """
-        svg_str = self.svg_renderer.render(diagram, theme, output_spec)
-        try:
-            import cairosvg  # type: ignore[import-untyped, import-not-found]
+        *,
+        output_path: str | Path | None = None,
+        theme: str = "light",
+    ) -> bytes:
 
-            png_bytes = cairosvg.svg2png(bytestring=svg_str.encode("utf-8"))
-            return base64.b64encode(png_bytes).decode("utf-8")
-        except ImportError:
+        svg = SVGRenderer().render(
+            diagram,
+            theme=theme,
+        )
+
+        try:
+            import cairosvg  # type: ignore[import-not-found]
+        except ImportError as exc:
             raise RuntimeError(
-                "cairosvg is required for raster PNG rendering. Install with: pip install cairosvg"
+                "PNG rendering requires CairoSVG. "
+                "Install it with: pip install cairosvg"
+            ) from exc
+
+        png_bytes = cairosvg.svg2png(
+            bytestring=svg.encode("utf-8")
+        )
+
+        if output_path is not None:
+            Path(output_path).write_bytes(
+                png_bytes
             )
+
+        return png_bytes
