@@ -1,0 +1,1 @@
+import ResourcePage from "@/components/ui/ResourcePage";export default function Page(){return <ResourcePage title="Coding Agent" description="Reserved workspace for the coding-agent runtime." path="/execution/tools"/>}

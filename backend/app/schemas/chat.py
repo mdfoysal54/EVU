@@ -5,7 +5,7 @@ from app.schemas.document import RAGSource
 
 class ChatRequest(BaseModel):
     message: str = Field(min_length=1, max_length=10000)
-    provider: str = Field(default="openai", min_length=1)
+    provider: str = Field(default="evu", min_length=1)
     model: str | None = None
     use_rag: bool = True
 

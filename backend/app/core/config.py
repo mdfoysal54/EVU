@@ -295,6 +295,19 @@ class Settings(BaseSettings):
     CONTEXT_HIERARCHICAL_SCORE_ALPHA: float = 0.70
 
     # ---------------------------------------------------------
+    # EVU OWN MODEL
+    # ---------------------------------------------------------
+    EVU_ENABLED: bool = True
+    EVU_MODEL_BUNDLE_DIR: str = "./models/evu"
+    EVU_MODEL_DEVICE: str = "cpu"
+    EVU_MODEL_MAX_NEW_TOKENS: int = 128
+    EVU_MODEL_TEMPERATURE: float = 0.7
+    EVU_MODEL_TOP_K: int = 50
+    EVU_MODEL_TOP_P: float = 0.95
+    EVU_DEFAULT_PROVIDER: str = "evu"
+    EVU_FALLBACK_PROVIDER: str = ""
+
+    # ---------------------------------------------------------
     # PYDANTIC SETTINGS
     # ---------------------------------------------------------
     model_config = SettingsConfigDict(

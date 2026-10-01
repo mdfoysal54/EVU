@@ -1,8 +1,7 @@
 from __future__ import annotations
-
 from dataclasses import dataclass, field
+from enum import Enum
 from typing import Any
-
 from .ir import DiagramIR
 
 
@@ -33,3 +32,21 @@ class DiagramResult:
     @property
     def mermaid(self) -> str:
         return self.diagram.to_mermaid()
+
+
+class DiagramFormat(str, Enum):
+    SVG = "svg"
+    HTML = "html"
+    PNG = "png"
+
+
+class DiagramSize(str, Enum):
+    DOC_WIDE = "doc-wide"
+    SCREEN = "screen"
+    COMPACT = "compact"
+
+
+@dataclass
+class DiagramOutputSpec:
+    format: DiagramFormat = DiagramFormat.SVG
+    size: DiagramSize = DiagramSize.DOC_WIDE

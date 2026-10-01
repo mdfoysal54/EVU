@@ -1,0 +1,1 @@
+import ResourcePage from "@/components/ui/ResourcePage";export default function Page(){return <ResourcePage title="Observability" description="Runtime metrics and application health" path="/observability/metrics"/>}

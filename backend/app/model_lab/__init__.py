@@ -1,41 +1,19 @@
-"""
-EVU Model Lab.
+"""EVU Model Lab: owned-model architecture, data, training and inference."""
 
-Architecture, tokenizer, training, and fine-tuning
-infrastructure.
-"""
-
-from .architecture import (
-    EVUModelConfig,
-    EVUTransformer,
-)
-
+from .architecture import EVUModelConfig, EVUModelOutput, EVUTransformer
 from .tokenizer import (
-    Vocabulary,
-    EVUTokenizer,
-    TokenizerConfig,
+    Vocabulary, EVUTokenizer, TokenizerConfig,
+    ByteBPETokenizer, ByteBPETokenizerConfig,
 )
-
-from .training import (
-    Trainer,
-    TrainingConfig,
-)
-
-from .finetuning import (
-    LoRALinear,
-    SFTDataset,
-    PreferenceDataset,
-)
+from .training import Trainer, TrainingConfig
+from .finetuning import LoRALinear, SFTDataset, PreferenceDataset
+from .inference import EVUInferenceEngine, GenerationConfig
+from .registry import ModelRegistry, VersionRegistry
 
 __all__ = [
-    "EVUModelConfig",
-    "EVUTransformer",
-    "Vocabulary",
-    "EVUTokenizer",
-    "TokenizerConfig",
-    "Trainer",
-    "TrainingConfig",
-    "LoRALinear",
-    "SFTDataset",
-    "PreferenceDataset",
+    "EVUModelConfig", "EVUModelOutput", "EVUTransformer",
+    "Vocabulary", "EVUTokenizer", "TokenizerConfig",
+    "ByteBPETokenizer", "ByteBPETokenizerConfig",
+    "Trainer", "TrainingConfig", "LoRALinear", "SFTDataset", "PreferenceDataset",
+    "EVUInferenceEngine", "GenerationConfig", "ModelRegistry", "VersionRegistry",
 ]

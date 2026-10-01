@@ -1,0 +1,1 @@
+import ResourcePage from "@/components/ui/ResourcePage";export default function Page(){return <ResourcePage title="Security" description="Permissions, roles and security audit surfaces" path="/security/me"/>}

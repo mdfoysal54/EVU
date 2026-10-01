@@ -1,0 +1,1 @@
+import ResourcePage from "@/components/ui/ResourcePage";export default function Page(){return <ResourcePage title="Memory" description="Long-term user memory and conversation context" path="/memory"/>}

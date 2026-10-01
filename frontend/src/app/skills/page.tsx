@@ -1,0 +1,1 @@
+import ResourcePage from "@/components/ui/ResourcePage";export default function Page(){return <ResourcePage title="Skills" description="Skill registry and progressive loading workspace." path="/execution/tools"/>}

@@ -789,3 +789,17 @@ class DiagramBudget:
             1.0,
             current / maximum,
         )
+
+
+def complexity_budget(node_count: int, edge_count: int) -> dict:
+    """Return a small, deterministic complexity decision for agent tooling."""
+    score = node_count * 0.8 + edge_count * 0.4
+    if score < 20:
+        level, action = "low", "single_canvas"
+    elif score < 50:
+        level, action = "medium", "single_canvas"
+    elif score < 100:
+        level, action = "high", "consider_split"
+    else:
+        level, action = "split", "split_into_subdiagrams"
+    return {"level": level, "score": round(score, 2), "recommended_action": action}

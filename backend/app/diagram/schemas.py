@@ -59,3 +59,6 @@ class DiagramTypeResponse(BaseModel):
 
 class DiagramTypesResponse(BaseModel):
     types: list[DiagramTypeResponse]
+# Backward-compatible names used by older EVU imports.
+DiagramRequest = DiagramGenerateRequest
+DiagramSchema = DiagramResponse

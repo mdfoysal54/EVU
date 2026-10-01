@@ -152,7 +152,7 @@ class ContextService:
         now = datetime.now(timezone.utc)
         cutoff = now - timedelta(minutes=dedup_window_minutes)
 
-        async with get_db_session() as db:
+        with get_db_session() as db:
             result = await db.execute(
                 select(ContextNode).where(
                     ContextNode.user_id == user_id,
@@ -270,7 +270,7 @@ class ContextService:
         max_chars: int = 12000,
     ) -> list[dict]:
 
-        async with get_db_session() as db:
+        with get_db_session() as db:
 
             stmt = select(ContextNode).where(
                 ContextNode.is_active.is_(True)

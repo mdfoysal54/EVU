@@ -1,6 +1,17 @@
 from pydantic import BaseModel, Field
-
 from app.schemas.document import RAGSource
+
+
+class PlannedStep(BaseModel):
+    step_id: int = Field(ge=1)
+    tool: str = Field(min_length=1)
+    description: str = ""
+    input_parameters: dict = Field(default_factory=dict)
+
+
+class AgentPlan(BaseModel):
+    reasoning: str = ""
+    steps: list[PlannedStep] = Field(default_factory=list)
 
 
 class AgentRequest(BaseModel):
