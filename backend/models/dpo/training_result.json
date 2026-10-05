@@ -1,0 +1,20 @@
+{
+  "epochs": 1,
+  "global_step": 4,
+  "train_examples": 7,
+  "validation_examples": 1,
+  "history": [
+    {
+      "epoch": 1,
+      "global_step": 4,
+      "train_loss": 0.5596034713089466,
+      "train_preference_accuracy": 0.125,
+      "validation": {
+        "loss": 0.21924422681331635,
+        "preference_accuracy": 0.0,
+        "examples": 1,
+        "perplexity_like": 1.2451353349914371
+      }
+    }
+  ]
+}

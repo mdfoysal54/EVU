@@ -1,0 +1,1 @@
+{"instruction": "Search the database for user 42", "response": "Action: call_db(query=\"SELECT * FROM users WHERE id=42\")"}

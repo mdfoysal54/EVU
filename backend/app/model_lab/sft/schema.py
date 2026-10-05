@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from dataclasses import asdict, dataclass
 import json
+from dataclasses import asdict, dataclass, field
 from pathlib import Path
-from typing import Iterable
+from typing import Any, Iterable
 
 
 VALID_ROLES = {
@@ -59,8 +59,16 @@ class ConversationExample:
         cls,
         data: dict,
     ) -> "ConversationExample":
-
         if "messages" not in data:
+            # Fallback to prompt/response if provided in flat format
+            if "prompt" in data and "response" in data:
+                return cls(
+                    messages=[
+                        Message(role="user", content=str(data["prompt"])),
+                        Message(role="assistant", content=str(data["response"])),
+                    ],
+                    metadata=data.get("metadata"),
+                )
             raise ValueError(
                 "SFT example is missing 'messages'."
             )
@@ -85,6 +93,70 @@ class ConversationExample:
                 for message in self.messages
             ],
             "metadata": self.metadata or {},
+        }
+
+
+@dataclass
+class SFTExample:
+    """
+    Representation of an SFT training instance, supporting flat prompt/response
+    as well as underlying conversational message structures.
+    """
+    prompt: str = ""
+    response: str = ""
+    task_type: str = "general"
+    metadata: dict[str, Any] = field(default_factory=dict)
+    messages: list[Message] = field(default_factory=list)
+
+    def __post_init__(self) -> None:
+        # Synchronize messages and prompt/response
+        if not self.messages and self.prompt and self.response:
+            self.messages = [
+                Message(role="user", content=self.prompt),
+                Message(role="assistant", content=self.response),
+            ]
+        elif self.messages:
+            if not self.response and self.messages[-1].role == "assistant":
+                self.response = self.messages[-1].content
+            if not self.prompt:
+                user_msgs = [m.content for m in self.messages if m.role == "user"]
+                if user_msgs:
+                    self.prompt = user_msgs[0]
+
+    @classmethod
+    def from_dict(cls, data: dict[str, Any]) -> "SFTExample":
+        metadata = data.get("metadata") or {}
+        task_type = data.get("task_type", metadata.get("task_type", "general"))
+
+        if "messages" in data:
+            messages = [
+                Message(role=item["role"], content=item["content"])
+                for item in data["messages"]
+            ]
+            user_text = next((m.content for m in messages if m.role == "user"), "")
+            asst_text = next((m.content for m in reversed(messages) if m.role == "assistant"), "")
+            return cls(
+                prompt=data.get("prompt", user_text),
+                response=data.get("response", asst_text),
+                task_type=task_type,
+                metadata=metadata,
+                messages=messages,
+            )
+
+        return cls(
+            prompt=str(data.get("prompt", "")),
+            response=str(data.get("response", "")),
+            task_type=task_type,
+            metadata=metadata,
+        )
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "prompt": self.prompt,
+            "response": self.response,
+            "task_type": self.task_type,
+            "metadata": self.metadata,
+            "messages": [asdict(m) for m in self.messages] if self.messages else [],
         }
 
 
@@ -139,7 +211,7 @@ def load_jsonl_examples(
 
 
 def save_jsonl_examples(
-    examples: Iterable[ConversationExample],
+    examples: Iterable[ConversationExample | SFTExample],
     path: str | Path,
 ) -> None:
 
@@ -162,3 +234,13 @@ def save_jsonl_examples(
                 )
                 + "\n"
             )
+
+
+__all__ = [
+    "VALID_ROLES",
+    "Message",
+    "ConversationExample",
+    "SFTExample",
+    "load_jsonl_examples",
+    "save_jsonl_examples",
+]
