@@ -1,6 +1,3 @@
-# EVU — Steps 1 to 5 MERGED
-
-## Step 5: Multi-LLM Gateway
 
 EVU can now route the same chat request to different providers:
 
