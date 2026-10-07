@@ -1,1 +1,0 @@
-import ResourcePage from "@/components/ui/ResourcePage";export default function Page(){return <ResourcePage title="Conversations" description="Persistent EVU conversations and message history" path="/conversations"/>}

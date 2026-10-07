@@ -1,1 +1,0 @@
-import ResourcePage from "@/components/ui/ResourcePage";export default function Page(){return <ResourcePage title="Workflows / Tasks" description="Background task state and workflow execution surfaces" path="/tasks"/>}

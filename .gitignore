@@ -1,3 +1,7 @@
-
-backend/models/sft/*.pt
-*.pt
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+*.db
+.env
+.env.local

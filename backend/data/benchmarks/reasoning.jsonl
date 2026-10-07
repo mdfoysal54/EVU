@@ -1,0 +1,110 @@
+{"id":"reasoning-001","category":"reasoning","prompt":"If a box contains 4 rows of 5 apples, how many apples are there?","expected":"20"}
+{"id":"reasoning-002","category":"reasoning","prompt":"A car travels at 60 km/h for 2.5 hours. How far did it travel?","expected":"150"}
+{"id":"reasoning-003","category":"reasoning","prompt":"An item costs $80 and has a 25% discount. What is the final price?","expected":"60"}
+{"id":"reasoning-004","category":"reasoning","prompt":"If 5 workers build a wall in 10 days, how many days will 10 workers take at the same pace?","expected":"5"}
+{"id":"reasoning-005","category":"reasoning","prompt":"A bag has 3 red balls and 7 blue balls. What is the probability of picking a red ball?","expected":"0.3"}
+{"id":"reasoning-006","category":"reasoning","prompt":"John is twice as old as Mary. If Mary is 15, how old will John be in 5 years?","expected":"35"}
+{"id":"reasoning-007","category":"reasoning","prompt":"If yesterday was Sunday, what day will it be 3 days after tomorrow?","expected":"Friday"}
+{"id":"reasoning-008","category":"reasoning","prompt":"A train 200m long passes a pole in 10 seconds. What is its speed in m/s?","expected":"20"}
+{"id":"reasoning-009","category":"reasoning","prompt":"If all cats are animals, and Felix is a cat, is Felix an animal?","expected":"yes"}
+{"id":"reasoning-010","category":"reasoning","prompt":"What is the next number in the sequence: 2, 4, 8, 16, ...?","expected":"32"}
+{"id":"reasoning-011","category":"reasoning","prompt":"A bakery bakes 12 trays of cookies. Each tray holds 24 cookies. How many total cookies are baked?","expected":"288"}
+{"id":"reasoning-012","category":"reasoning","prompt":"If a car travels at 75 km/h, how many kilometers does it cover in 3 hours and 20 minutes?","expected":"250"}
+{"id":"reasoning-013","category":"reasoning","prompt":"A laptop originally priced at $1,200 is on a 15% discount. What is the sale price?","expected":"1020"}
+{"id":"reasoning-014","category":"reasoning","prompt":"If 8 workers can paint a bridge in 15 days, how many days will it take 12 workers working at the exact same rate?","expected":"10"}
+{"id":"reasoning-015","category":"reasoning","prompt":"A standard six-sided die is rolled. What is the probability of rolling a prime number?","expected":"0.5"}
+{"id":"reasoning-016","category":"reasoning","prompt":"Sam is 4 times older than his nephew. In 10 years, Sam will be twice as old as his nephew. How old is Sam today?","expected":"20"}
+{"id":"reasoning-017","category":"reasoning","prompt":"If three days before yesterday was Thursday, what day will it be tomorrow?","expected":"Tuesday"}
+{"id":"reasoning-018","category":"reasoning","prompt":"A 150-meter-long train crosses a 350-meter bridge in 25 seconds. What is the speed of the train in meters per second?","expected":"20"}
+{"id":"reasoning-019","category":"reasoning","prompt":"All roses are flowers. Some flowers fade quickly. Can we logically conclude that some roses definitely fade quickly?","expected":"no"}
+{"id":"reasoning-020","category":"reasoning","prompt":"What is the next number in the series: 3, 9, 27, 81, ...?","expected":"243"}
+{"id":"reasoning-021","category":"reasoning","prompt":"A water tank holds 500 liters. Pipe A fills it at 20 L/min and Pipe B empties it at 10 L/min. How long does it take to fill the empty tank if both pipes are open?","expected":"50"}
+{"id":"reasoning-022","category":"reasoning","prompt":"If 6x + 9 = 45, what is the value of 2x - 3?","expected":"9"}
+{"id":"reasoning-023","category":"reasoning","prompt":"A runner completes a 10 km race in 48 minutes. What is their average pace in minutes per kilometer?","expected":"4.8"}
+{"id":"reasoning-024","category":"reasoning","prompt":"You deposit $2,000 into an account earning 5% simple annual interest. What is the total balance after 3 years?","expected":"2300"}
+{"id":"reasoning-025","category":"reasoning","prompt":"A box contains 5 red, 3 green, and 2 blue marbles. What is the probability of drawing either a red or blue marble?","expected":"0.7"}
+{"id":"reasoning-026","category":"reasoning","prompt":"What is the missing number in the sequence: 2, 5, 10, 17, 26, ...?","expected":"37"}
+{"id":"reasoning-027","category":"reasoning","prompt":"If all squares are rectangles and all rectangles are quadrilaterals, are all squares quadrilaterals?","expected":"yes"}
+{"id":"reasoning-028","category":"reasoning","prompt":"A farmer has 17 sheep. All but 9 run away. How many sheep does the farmer have left?","expected":"9"}
+{"id":"reasoning-029","category":"reasoning","prompt":"A clock shows 3:15. What is the angle between the hour hand and the minute hand?","expected":"7.5"}
+{"id":"reasoning-030","category":"reasoning","prompt":"If 3 cats catch 3 mice in 3 minutes, how many minutes will 100 cats take to catch 100 mice?","expected":"3"}
+{"id":"reasoning-031","category":"reasoning","prompt":"A shopkeeper buys an article for $40 and sells it for $50. What is the percentage profit?","expected":"25"}
+{"id":"reasoning-032","category":"reasoning","prompt":"Find the perimeter of a rectangle with length 18 cm and width 7 cm.","expected":"50"}
+{"id":"reasoning-033","category":"reasoning","prompt":"If x + y = 14 and x - y = 4, what is the value of x?","expected":"9"}
+{"id":"reasoning-034","category":"reasoning","prompt":"A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost in cents?","expected":"5"}
+{"id":"reasoning-035","category":"reasoning","prompt":"What is the next number in the Fibonacci sequence: 1, 1, 2, 3, 5, 8, 13, ...?","expected":"21"}
+{"id":"reasoning-036","category":"reasoning","prompt":"If 4 men can dig 4 holes in 4 hours, how many hours does it take 8 men to dig 8 holes?","expected":"4"}
+{"id":"reasoning-037","category":"reasoning","prompt":"A shirt marked at $60 is sold for $45. What was the percentage discount?","expected":"25"}
+{"id":"reasoning-038","category":"reasoning","prompt":"If two fair coins are flipped simultaneously, what is the probability that both show heads?","expected":"0.25"}
+{"id":"reasoning-039","category":"reasoning","prompt":"Sarah is taller than Jessica. Jessica is shorter than Chloe. Who is guaranteed to be the shortest?","expected":"Jessica"}
+{"id":"reasoning-040","category":"reasoning","prompt":"A car travels 120 km at 60 km/h, then returns along the same route at 40 km/h. What is the average speed for the round trip in km/h?","expected":"48"}
+{"id":"reasoning-041","category":"reasoning","prompt":"What is the surface area of a cube with side length 4 cm?","expected":"96"}
+{"id":"reasoning-042","category":"reasoning","prompt":"If today is Wednesday, what day of the week will it be 100 days from now?","expected":"Friday"}
+{"id":"reasoning-043","category":"reasoning","prompt":"A worker earns $18 per hour for standard hours and 1.5 times that rate for overtime. If they work 40 standard hours and 6 overtime hours, what is their gross pay?","expected":"882"}
+{"id":"reasoning-044","category":"reasoning","prompt":"If 7 pencils and 3 erasers cost $13, and 1 eraser costs $2, what is the cost of 1 pencil?","expected":"1"}
+{"id":"reasoning-045","category":"reasoning","prompt":"What is the median of the numbers 7, 2, 9, 4, 11, 8, 1?","expected":"7"}
+{"id":"reasoning-046","category":"reasoning","prompt":"A bag contains 6 black balls and 4 white balls. Two balls are drawn without replacement. What is the probability that both are white?","expected":"0.133"}
+{"id":"reasoning-047","category":"reasoning","prompt":"Identify the next term in the pattern: 64, 32, 16, 8, ...?","expected":"4"}
+{"id":"reasoning-048","category":"reasoning","prompt":"A book has 250 pages. How many digit characters were typed to number all pages starting from 1?","expected":"642"}
+{"id":"reasoning-049","category":"reasoning","prompt":"If no A are B, and all C are A, can any C be B?","expected":"no"}
+{"id":"reasoning-050","category":"reasoning","prompt":"Two cyclists start at the same point and travel in opposite directions at 15 km/h and 20 km/h. How many hours until they are 105 km apart?","expected":"3"}
+{"id":"reasoning-051","category":"reasoning","prompt":"What is the compound interest earned on $1,000 at 10% per annum compounded annually for 2 years?","expected":"210"}
+{"id":"reasoning-052","category":"reasoning","prompt":"If 5a = 3b and b = 15, what is the value of a?","expected":"9"}
+{"id":"reasoning-053","category":"reasoning","prompt":"A ladder 10 meters long leans against a vertical wall. If the base of the ladder is 6 meters from the wall, how high up does it reach?","expected":"8"}
+{"id":"reasoning-054","category":"reasoning","prompt":"What is the area of a right-angled triangle with base 12 cm and height 5 cm?","expected":"30"}
+{"id":"reasoning-055","category":"reasoning","prompt":"If all birds have feathers and penguins are birds, do penguins have feathers?","expected":"yes"}
+{"id":"reasoning-056","category":"reasoning","prompt":"A container holds a mixture of 40 liters of milk and water in a 3:1 ratio. How many liters of water are in the container?","expected":"10"}
+{"id":"reasoning-057","category":"reasoning","prompt":"What is the next number in the sequence: 1, 4, 9, 16, 25, 36, ...?","expected":"49"}
+{"id":"reasoning-058","category":"reasoning","prompt":"A rectangular field measures 50 meters by 30 meters. What is the cost of fencing it at $4 per meter?","expected":"640"}
+{"id":"reasoning-059","category":"reasoning","prompt":"If 15% of a number is 45, what is the number?","expected":"300"}
+{"id":"reasoning-060","category":"reasoning","prompt":"David's father has three sons: Snap, Crackle, and who?","expected":"David"}
+{"id":"reasoning-061","category":"reasoning","prompt":"A plane flies 1,800 miles in 4 hours against a headwind. With a tailwind, it covers the same distance in 3 hours. What is the wind speed in mph?","expected":"75"}
+{"id":"reasoning-062","category":"reasoning","prompt":"How many two-digit positive integers are divisible by 5?","expected":"18"}
+{"id":"reasoning-063","category":"reasoning","prompt":"A cylinder has a base radius of 3 cm and height of 7 cm. Using pi = 22/7, what is its volume in cubic centimeters?","expected":"198"}
+{"id":"reasoning-064","category":"reasoning","prompt":"If a fair coin is flipped 3 times, what is the probability of getting exactly 2 heads?","expected":"0.375"}
+{"id":"reasoning-065","category":"reasoning","prompt":"What is the value of 5! (5 factorial)?","expected":"120"}
+{"id":"reasoning-066","category":"reasoning","prompt":"A person walks 3 km north, then 4 km east. How far are they from their starting point in a straight line?","expected":"5"}
+{"id":"reasoning-067","category":"reasoning","prompt":"If 20 people in a room all shake hands with each other once, how many total handshakes occur?","expected":"190"}
+{"id":"reasoning-068","category":"reasoning","prompt":"What is the next letter in the pattern: B, D, F, H, ...?","expected":"J"}
+{"id":"reasoning-069","category":"reasoning","prompt":"An investment yields a 20% gain in year one and a 10% loss in year two. What is the net percentage return over the two years?","expected":"8"}
+{"id":"reasoning-070","category":"reasoning","prompt":"If x/3 + 4 = 10, what is the value of x?","expected":"18"}
+{"id":"reasoning-071","category":"reasoning","prompt":"A car consumes 8 liters of fuel per 100 kilometers. How many liters are needed for a 350-kilometer trip?","expected":"28"}
+{"id":"reasoning-072","category":"reasoning","prompt":"If all mammals are warm-blooded and reptiles are not mammals, can we deduce that no reptiles are warm-blooded?","expected":"no"}
+{"id":"reasoning-073","category":"reasoning","prompt":"Find the least common multiple (LCM) of 12 and 18.","expected":"36"}
+{"id":"reasoning-074","category":"reasoning","prompt":"Find the greatest common divisor (GCD) of 54 and 24.","expected":"6"}
+{"id":"reasoning-075","category":"reasoning","prompt":"A pipe fills a pool in 6 hours, while a second pipe fills it in 3 hours. How many hours will both pipes take together?","expected":"2"}
+{"id":"reasoning-076","category":"reasoning","prompt":"What is the sum of the interior angles of a pentagon?","expected":"540"}
+{"id":"reasoning-077","category":"reasoning","prompt":"If 2^n = 128, what is the value of n?","expected":"7"}
+{"id":"reasoning-078","category":"reasoning","prompt":"A jar contains only nickels (5 cents) and dimes (10 cents). There are 20 coins totaling $1.40. How many dimes are in the jar?","expected":"8"}
+{"id":"reasoning-079","category":"reasoning","prompt":"What is the units digit of 7^4?","expected":"1"}
+{"id":"reasoning-080","category":"reasoning","prompt":"In a group of 30 students, 18 take Spanish, 12 take French, and 5 take both. How many take neither?","expected":"5"}
+{"id":"reasoning-081","category":"reasoning","prompt":"What is the next number in the series: 2, 3, 5, 7, 11, 13, ...?","expected":"17"}
+{"id":"reasoning-082","category":"reasoning","prompt":"A grandfather clock chimes once at 1:00, twice at 2:00, and so on. How many total chimes does it ring from 1:00 to 12:00 inclusive?","expected":"78"}
+{"id":"reasoning-083","category":"reasoning","prompt":"If log10(x) = 3, what is x?","expected":"1000"}
+{"id":"reasoning-084","category":"reasoning","prompt":"The average of four numbers is 15. If three of the numbers are 12, 14, and 18, what is the fourth number?","expected":"16"}
+{"id":"reasoning-085","category":"reasoning","prompt":"A 20-meter rope is cut into two pieces such that one piece is 4 meters longer than the other. What is the length of the shorter piece?","expected":"8"}
+{"id":"reasoning-086","category":"reasoning","prompt":"If false implies false in formal propositional logic, is the conditional statement true or false?","expected":"true"}
+{"id":"reasoning-087","category":"reasoning","prompt":"What is the perimeter of an equilateral triangle with an area of 9*sqrt(3) square cm?","expected":"18"}
+{"id":"reasoning-088","category":"reasoning","prompt":"A wheel has a diameter of 70 cm. Using pi = 22/7, how many meters does it travel in 100 complete rotations?","expected":"220"}
+{"id":"reasoning-089","category":"reasoning","prompt":"If 3 apples trade for 2 oranges, and 4 oranges trade for 6 bananas, how many bananas trade for 6 apples?","expected":"6"}
+{"id":"reasoning-090","category":"reasoning","prompt":"Determine the value of x if 3^(2x - 1) = 27.","expected":"2"}
+{"id":"reasoning-091","category":"reasoning","prompt":"A factory produces 45 defective parts out of 1,500 total parts. What is the defective rate as a percentage?","expected":"3"}
+{"id":"reasoning-092","category":"reasoning","prompt":"Tom is facing north. He turns 90 degrees clockwise, then 180 degrees counter-clockwise. Which direction is he facing now?","expected":"west"}
+{"id":"reasoning-093","category":"reasoning","prompt":"What is the next number in the pattern: 1, 8, 27, 64, 125, ...?","expected":"216"}
+{"id":"reasoning-094","category":"reasoning","prompt":"A mixture contains alcohol and water in the ratio 4:5. If 10 liters of water are added, the ratio becomes 4:7. How many liters of alcohol are in the mixture?","expected":"20"}
+{"id":"reasoning-095","category":"reasoning","prompt":"If all cats sleep all day and Leo is a cat, does Leo sleep all day?","expected":"yes"}
+{"id":"reasoning-096","category":"reasoning","prompt":"How many seconds are in 2 hours and 45 minutes?","expected":"9900"}
+{"id":"reasoning-097","category":"reasoning","prompt":"A regular hexagon has a side length of 6 cm. What is its perimeter?","expected":"36"}
+{"id":"reasoning-098","category":"reasoning","prompt":"What is the probability of drawing a Queen from a well-shuffled standard deck of 52 cards?","expected":"0.0769"}
+{"id":"reasoning-099","category":"reasoning","prompt":"If 2a + 3b = 21 and a = 3, what is the value of b?","expected":"5"}
+{"id":"reasoning-100","category":"reasoning","prompt":"A snail climbs up a 10-foot wall. It climbs 3 feet every day and slips down 2 feet every night. On which day does it reach the top?","expected":"8"}
+{"id":"reasoning-101","category":"reasoning","prompt":"What is the root of the equation 4x - 12 = 0?","expected":"3"}
+{"id":"reasoning-102","category":"reasoning","prompt":"If an angle is twice its complement, what is the measurement of the angle in degrees?","expected":"60"}
+{"id":"reasoning-103","category":"reasoning","prompt":"A train travelling at 90 km/h crosses a pole in 8 seconds. What is the length of the train in meters?","expected":"200"}
+{"id":"reasoning-104","category":"reasoning","prompt":"A worker completes 1/4 of a task on Monday and 1/3 of the remaining task on Tuesday. What fraction of the total task remains?","expected":"0.5"}
+{"id":"reasoning-105","category":"reasoning","prompt":"How many prime numbers exist between 10 and 30?","expected":"6"}
+{"id":"reasoning-106","category":"reasoning","prompt":"If P implies Q, and Q is false, what must be true about P?","expected":"false"}
+{"id":"reasoning-107","category":"reasoning","prompt":"A rectangular prism has length 8 cm, width 5 cm, and height 3 cm. What is its volume?","expected":"120"}
+{"id":"reasoning-108","category":"reasoning","prompt":"If 5 workers build 5 chairs in 5 days, how many chairs can 10 workers build in 10 days?","expected":"20"}
+{"id":"reasoning-109","category":"reasoning","prompt":"What is the average of the first 10 positive integers?","expected":"5.5"}
+{"id":"reasoning-110","category":"reasoning","prompt":"A store markup is 40% on an item bought wholesale for $50. What is the retail price?","expected":"70"}

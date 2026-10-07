@@ -1,4 +1,6 @@
+import asyncio
 from contextlib import asynccontextmanager
+import logging
 import time
 
 from fastapi import FastAPI, Request
@@ -18,7 +20,7 @@ from app.context import models as context_models  # Ensures context model metada
 from app.observability.service import observability_service
 from app.services.redis_service import redis_service
 
-# API Route Routers (Sorted Alphabetically)
+# API Route Routers
 from app.api.routes.agent import router as agent_router
 from app.api.routes.audio import router as audio_router
 from app.api.routes.auth import router as auth_router
@@ -46,27 +48,52 @@ from app.api.routes.vision import router as vision_router
 from app.api.routes.web import router as web_router
 from app.research.api.routes import router as research_router
 
+logger = logging.getLogger("uvicorn")
+
+
+def _init_db_and_tools():
+    logger.info("--> Initializing database schemas...")
+    # If using async engine, use engine.sync_engine; otherwise plain engine
+    target_engine = getattr(engine, "sync_engine", engine)
+    Base.metadata.create_all(bind=target_engine)
+    logger.info("--> Schemas created. Registering default tools...")
+    register_default_tools()
+    logger.info("--> Tools registered successfully.")
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Database tables are created for incremental SQLite/Postgres development.
-    # Alembic remains the production migration path.
-    Base.metadata.create_all(bind=engine)
-    register_default_tools()
+    logger.info("Starting lifespan initialization...")
+    try:
+        # Offload synchronous setup off the main event loop
+        await asyncio.to_thread(_init_db_and_tools)
+        logger.info("Lifespan initialization complete.")
+    except Exception as exc:
+        logger.error(f"Error during lifespan startup: {exc}", exc_info=True)
+        raise exc
     yield
+    logger.info("Shutting down application...")
 
 
 app = FastAPI(
     title=settings.APP_NAME,
     version="1.1.0",
-    description="EVU AI Meta-Orchestrator",
+    description="EVU AI",
     lifespan=lifespan,
 )
 
-# Middleware
+# Allow both hostname formats to avoid browser CORS / Fetch rejections
+allowed_origins = list(
+    {
+        settings.FRONTEND_URL,
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+    }
+)
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[settings.FRONTEND_URL],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -91,7 +118,6 @@ async def observe_requests(request: Request, call_next):
             )
 
 
-# Registered Routers (Sorted Alphabetically)
 ROUTERS = [
     agent_router,
     audio_router,
@@ -125,7 +151,6 @@ for router in ROUTERS:
     app.include_router(router)
 
 
-# Root Endpoints
 @app.get("/")
 async def root():
     return {

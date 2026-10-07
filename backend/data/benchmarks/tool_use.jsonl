@@ -1,0 +1,110 @@
+{"id":"tool_use-001","category":"tool_use","prompt":"What is the weather in Dhaka right now?","expected":"fetch_weather"}
+{"id":"tool_use-002","category":"tool_use","prompt":"Find user profile with ID 4052 in the database.","expected":"query_database"}
+{"id":"tool_use-003","category":"tool_use","prompt":"Send an email to john@example.com with subject Meeting.","expected":"send_email"}
+{"id":"tool_use-004","category":"tool_use","prompt":"Calculate the square root of 144.","expected":"calculator"}
+{"id":"tool_use-005","category":"tool_use","prompt":"Search the web for the latest football scores.","expected":"search_web"}
+{"id":"tool_use-006","category":"tool_use","prompt":"Create a new calendar event for team sync at 3 PM tomorrow.","expected":"create_calendar_event"}
+{"id":"tool_use-007","category":"tool_use","prompt":"Fetch the stock price of Apple (AAPL).","expected":"fetch_stock_price"}
+{"id":"tool_use-008","category":"tool_use","prompt":"Translate 'Hello' to Spanish.","expected":"translate_text"}
+{"id":"tool_use-009","category":"tool_use","prompt":"Execute shell command 'ls -la /tmp'.","expected":"execute_bash"}
+{"id":"tool_use-010","category":"tool_use","prompt":"Check disk space usage on the server.","expected":"check_disk_usage"}
+{"id":"tool_use-011","category":"tool_use","prompt":"What will the temperature be in Paris tomorrow afternoon?","expected":"fetch_weather"}
+{"id":"tool_use-012","category":"tool_use","prompt":"Fetch the order details for invoice number INV-99023.","expected":"query_database"}
+{"id":"tool_use-013","category":"tool_use","prompt":"Send an email to sarah@example.com letting her know the report is ready.","expected":"send_email"}
+{"id":"tool_use-014","category":"tool_use","prompt":"Calculate 254 multiplied by 87.","expected":"calculator"}
+{"id":"tool_use-015","category":"tool_use","prompt":"Find recent news articles about the James Webb Space Telescope discoveries.","expected":"search_web"}
+{"id":"tool_use-016","category":"tool_use","prompt":"Book a dentist appointment on my calendar for Friday at 10 AM.","expected":"create_calendar_event"}
+{"id":"tool_use-017","category":"tool_use","prompt":"What is the current stock price of Microsoft (MSFT)?","expected":"fetch_stock_price"}
+{"id":"tool_use-018","category":"tool_use","prompt":"Translate 'Where is the nearest train station?' into Japanese.","expected":"translate_text"}
+{"id":"tool_use-019","category":"tool_use","prompt":"Run the terminal command 'df -h' to check disk usage.","expected":"execute_bash"}
+{"id":"tool_use-020","category":"tool_use","prompt":"Check if the payment service container is currently running on the server.","expected":"check_service_status"}
+{"id":"tool_use-021","category":"tool_use","prompt":"What is the rain forecast for Tokyo this weekend?","expected":"fetch_weather"}
+{"id":"tool_use-022","category":"tool_use","prompt":"Look up employee email address for staff ID 8812.","expected":"query_database"}
+{"id":"tool_use-023","category":"tool_use","prompt":"Forward this invoice to finance-team@company.org.","expected":"send_email"}
+{"id":"tool_use-024","category":"tool_use","prompt":"Compute the value of 2 to the power of 16.","expected":"calculator"}
+{"id":"tool_use-025","category":"tool_use","prompt":"Look up recent results for the UEFA Champions League.","expected":"search_web"}
+{"id":"tool_use-026","category":"tool_use","prompt":"Schedule a sprint review meeting with the engineering team for Monday at 2 PM.","expected":"create_calendar_event"}
+{"id":"tool_use-027","category":"tool_use","prompt":"Fetch the 52-week high for Tesla (TSLA) stock.","expected":"fetch_stock_price"}
+{"id":"tool_use-028","category":"tool_use","prompt":"Translate 'Thank you very much for your help' into German.","expected":"translate_text"}
+{"id":"tool_use-029","category":"tool_use","prompt":"Execute the bash command 'uptime' to inspect system load.","expected":"execute_bash"}
+{"id":"tool_use-030","category":"tool_use","prompt":"Check the health status of the Postgres database cluster.","expected":"check_service_status"}
+{"id":"tool_use-031","category":"tool_use","prompt":"Will it snow in Denver tonight?","expected":"fetch_weather"}
+{"id":"tool_use-032","category":"tool_use","prompt":"Find customer transaction history for account number ACCT-44219.","expected":"query_database"}
+{"id":"tool_use-033","category":"tool_use","prompt":"Send meeting notes to project-lead@domain.com.","expected":"send_email"}
+{"id":"tool_use-034","category":"tool_use","prompt":"Calculate 15% tip on a bill of $184.60.","expected":"calculator"}
+{"id":"tool_use-035","category":"tool_use","prompt":"Search the web for the latest Python 3.13 release notes.","expected":"search_web"}
+{"id":"tool_use-036","category":"tool_use","prompt":"Add a reminder to pay internet bill on the 1st of next month at 9 AM.","expected":"create_calendar_event"}
+{"id":"tool_use-037","category":"tool_use","prompt":"Check today's closing market price for Alphabet Inc. (GOOGL).","expected":"fetch_stock_price"}
+{"id":"tool_use-038","category":"tool_use","prompt":"Translate 'Good morning, how can I help you today?' into French.","expected":"translate_text"}
+{"id":"tool_use-039","category":"tool_use","prompt":"Run 'netstat -tuln' on the server to list open ports.","expected":"execute_bash"}
+{"id":"tool_use-040","category":"tool_use","prompt":"Is the Redis caching container responding to ping?","expected":"check_service_status"}
+{"id":"tool_use-041","category":"tool_use","prompt":"What is the wind speed and humidity in Miami right now?","expected":"fetch_weather"}
+{"id":"tool_use-042","category":"tool_use","prompt":"Retrieve shipment tracking status for tracking code TRK-77102.","expected":"query_database"}
+{"id":"tool_use-043","category":"tool_use","prompt":"Send an interview invite to candidate@recruitment.com.","expected":"send_email"}
+{"id":"tool_use-044","category":"tool_use","prompt":"Evaluate log base 10 of 100000.","expected":"calculator"}
+{"id":"tool_use-045","category":"tool_use","prompt":"Find out who won the Nobel Prize in Physics this year.","expected":"search_web"}
+{"id":"tool_use-046","category":"tool_use","prompt":"Set up a 30-minute 1-on-1 meeting with Alex on Thursday at 4 PM.","expected":"create_calendar_event"}
+{"id":"tool_use-047","category":"tool_use","prompt":"What is the current trading price of Amazon (AMZN)?","expected":"fetch_stock_price"}
+{"id":"tool_use-048","category":"tool_use","prompt":"Translate this greeting from English to Korean: 'Nice to meet you'.","expected":"translate_text"}
+{"id":"tool_use-049","category":"tool_use","prompt":"Run 'grep -r \"ERROR\" /var/log/nginx/' using bash.","expected":"execute_bash"}
+{"id":"tool_use-050","category":"tool_use","prompt":"Verify if the Elasticsearch cluster status is green or yellow.","expected":"check_service_status"}
+{"id":"tool_use-051","category":"tool_use","prompt":"What is the 7-day weather outlook for London?","expected":"fetch_weather"}
+{"id":"tool_use-052","category":"tool_use","prompt":"Fetch inventory stock count for product SKU-5541.","expected":"query_database"}
+{"id":"tool_use-053","category":"tool_use","prompt":"Email the weekly analytics summary to executive-board@company.com.","expected":"send_email"}
+{"id":"tool_use-054","category":"tool_use","prompt":"Calculate the compound interest on $5,000 at 6% for 5 years.","expected":"calculator"}
+{"id":"tool_use-055","category":"tool_use","prompt":"Search for the latest research papers on multimodal LLMs.","expected":"search_web"}
+{"id":"tool_use-056","category":"tool_use","prompt":"Create a calendar entry for Product Launch on November 15 at 11:00 AM.","expected":"create_calendar_event"}
+{"id":"tool_use-057","category":"tool_use","prompt":"Get the current market cap of NVIDIA (NVDA).","expected":"fetch_stock_price"}
+{"id":"tool_use-058","category":"tool_use","prompt":"Translate 'Please turn off the lights before leaving' into Italian.","expected":"translate_text"}
+{"id":"tool_use-059","category":"tool_use","prompt":"Execute 'tail -n 50 /var/log/syslog' to inspect recent system logs.","expected":"execute_bash"}
+{"id":"tool_use-060","category":"tool_use","prompt":"Check whether the RabbitMQ queue consumer service is alive.","expected":"check_service_status"}
+{"id":"tool_use-061","category":"tool_use","prompt":"Is it currently raining in Singapore?","expected":"fetch_weather"}
+{"id":"tool_use-062","category":"tool_use","prompt":"Query the database for user profile details with email user@domain.com.","expected":"query_database"}
+{"id":"tool_use-063","category":"tool_use","prompt":"Dispatch a reset password email link to client-support@domain.org.","expected":"send_email"}
+{"id":"tool_use-064","category":"tool_use","prompt":"What is 1845 divided by 15?","expected":"calculator"}
+{"id":"tool_use-065","category":"tool_use","prompt":"Search online for recent updates regarding the Mars Rover mission.","expected":"search_web"}
+{"id":"tool_use-066","category":"tool_use","prompt":"Put a quarterly budget planning meeting on my calendar for next Wednesday at 10 AM.","expected":"create_calendar_event"}
+{"id":"tool_use-067","category":"tool_use","prompt":"Check the dividend yield for Johnson & Johnson (JNJ).","expected":"fetch_stock_price"}
+{"id":"tool_use-068","category":"tool_use","prompt":"Translate 'The train leaves at half past eight' into Arabic.","expected":"translate_text"}
+{"id":"tool_use-069","category":"tool_use","prompt":"Run 'free -m' in terminal to monitor free memory.","expected":"execute_bash"}
+{"id":"tool_use-070","category":"tool_use","prompt":"Check whether the backend authentication container is healthy.","expected":"check_service_status"}
+{"id":"tool_use-071","category":"tool_use","prompt":"Check UV index and cloud coverage in Sydney right now.","expected":"fetch_weather"}
+{"id":"tool_use-072","category":"tool_use","prompt":"Look up warehouse location and bin number for item ID 9931.","expected":"query_database"}
+{"id":"tool_use-073","category":"tool_use","prompt":"Send an automated order confirmation email to buyer123@gmail.com.","expected":"send_email"}
+{"id":"tool_use-074","category":"tool_use","prompt":"Calculate the hypotenuse of a right triangle with sides 9 and 12.","expected":"calculator"}
+{"id":"tool_use-075","category":"tool_use","prompt":"Search the web for current exchange rates between EUR and USD.","expected":"search_web"}
+{"id":"tool_use-076","category":"tool_use","prompt":"Add a team lunch event to my calendar for Friday at 1 PM.","expected":"create_calendar_event"}
+{"id":"tool_use-077","category":"tool_use","prompt":"Retrieve the price-to-earnings ratio for Meta Platforms (META).","expected":"fetch_stock_price"}
+{"id":"tool_use-078","category":"tool_use","prompt":"Translate 'We need to confirm the reservation' into Portuguese.","expected":"translate_text"}
+{"id":"tool_use-079","category":"tool_use","prompt":"Execute 'ps aux | grep node' to find active Node.js processes.","expected":"execute_bash"}
+{"id":"tool_use-080","category":"tool_use","prompt":"Verify if the Nginx web server daemon is active and running.","expected":"check_service_status"}
+{"id":"tool_use-081","category":"tool_use","prompt":"What is the air quality index (AQI) in New Delhi today?","expected":"fetch_weather"}
+{"id":"tool_use-082","category":"tool_use","prompt":"Fetch supplier details from the database for supplier ID SUP-1004.","expected":"query_database"}
+{"id":"tool_use-083","category":"tool_use","prompt":"Send notification email to devops-alerts@company.internal.","expected":"send_email"}
+{"id":"tool_use-084","category":"tool_use","prompt":"Compute 73 squared minus 45 squared.","expected":"calculator"}
+{"id":"tool_use-085","category":"tool_use","prompt":"Search the web for recent electric vehicle safety test results.","expected":"search_web"}
+{"id":"tool_use-086","category":"tool_use","prompt":"Schedule client demo session for Tuesday October 20 at 3:30 PM.","expected":"create_calendar_event"}
+{"id":"tool_use-087","category":"tool_use","prompt":"What is the latest share price of Netflix (NFLX)?","expected":"fetch_stock_price"}
+{"id":"tool_use-088","category":"tool_use","prompt":"Translate 'Can you send me the contract by email?' into Russian.","expected":"translate_text"}
+{"id":"tool_use-089","category":"tool_use","prompt":"Run 'docker ps -a' to inspect container states on host machine.","expected":"execute_bash"}
+{"id":"tool_use-090","category":"tool_use","prompt":"Check if the Celery worker task runner is currently running.","expected":"check_service_status"}
+{"id":"tool_use-091","category":"tool_use","prompt":"What is the sunset time in San Francisco today?","expected":"fetch_weather"}
+{"id":"tool_use-092","category":"tool_use","prompt":"Search the database for customer reviews with rating below 2 stars.","expected":"query_database"}
+{"id":"tool_use-093","category":"tool_use","prompt":"Email the signed contract PDF to hr-compliance@enterprise.com.","expected":"send_email"}
+{"id":"tool_use-094","category":"tool_use","prompt":"Calculate 48 factorial divided by 46 factorial.","expected":"calculator"}
+{"id":"tool_use-095","category":"tool_use","prompt":"Search the web for upcoming tech conferences in Europe.","expected":"search_web"}
+{"id":"tool_use-096","category":"tool_use","prompt":"Create a recurring calendar event for Monday standup at 9:30 AM.","expected":"create_calendar_event"}
+{"id":"tool_use-097","category":"tool_use","prompt":"Fetch stock performance history for Berkshire Hathaway (BRK.B).","expected":"fetch_stock_price"}
+{"id":"tool_use-098","category":"tool_use","prompt":"Translate 'The meeting has been rescheduled to tomorrow' into Turkish.","expected":"translate_text"}
+{"id":"tool_use-099","category":"tool_use","prompt":"Run 'curl -I https://api.mysite.com/health' to check HTTP headers.","expected":"execute_bash"}
+{"id":"tool_use-100","category":"tool_use","prompt":"Check if the system cron daemon is actively running.","expected":"check_service_status"}
+{"id":"tool_use-101","category":"tool_use","prompt":"What is the current temperature and wind chill in Toronto?","expected":"fetch_weather"}
+{"id":"tool_use-102","category":"tool_use","prompt":"Retrieve order item list for customer order ID ORD-5028.","expected":"query_database"}
+{"id":"tool_use-103","category":"tool_use","prompt":"Send cancellation notice email to customer-support@retailer.com.","expected":"send_email"}
+{"id":"tool_use-104","category":"tool_use","prompt":"Calculate the cubic root of 2197.","expected":"calculator"}
+{"id":"tool_use-105","category":"tool_use","prompt":"Search the web for recent discoveries of exoplanets by NASA.","expected":"search_web"}
+{"id":"tool_use-106","category":"tool_use","prompt":"Schedule security audit review on calendar for next Thursday at 2 PM.","expected":"create_calendar_event"}
+{"id":"tool_use-107","category":"tool_use","prompt":"Fetch the latest price of Advanced Micro Devices (AMD).","expected":"fetch_stock_price"}
+{"id":"tool_use-108","category":"tool_use","prompt":"Translate 'Welcome to our international conference' into Hindi.","expected":"translate_text"}
+{"id":"tool_use-109","category":"tool_use","prompt":"Run 'ls -lh /var/data/backups' to list backup file sizes.","expected":"execute_bash"}
+{"id":"tool_use-110","category":"tool_use","prompt":"Check the operational status of the Kafka broker node.","expected":"check_service_status"}

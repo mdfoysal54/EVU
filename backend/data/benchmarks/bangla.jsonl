@@ -1,0 +1,110 @@
+{"id":"bangla-001","category":"bangla","prompt":"পাইথন কী?","expected":"প্রোগ্রামিং"}
+{"id":"bangla-002","category":"bangla","prompt":"কম্পিউটারের র‍্যাম (RAM) এর কাজ কী?","expected":"মেমরি"}
+{"id":"bangla-003","category":"bangla","prompt":"বাংলাদেশের রাজধানীর নাম কী?","expected":"ঢাকা"}
+{"id":"bangla-004","category":"bangla","prompt":"ওয়েব ডেভেলপমেন্টের জন্য কোন তিনটি মূল প্রযুক্তি ব্যবহৃত হয়?","expected":"HTML, CSS, JavaScript"}
+{"id":"bangla-005","category":"bangla","prompt":"ডাটাবেজ কী কাজে ব্যবহৃত হয়?","expected":"সংরক্ষণ"}
+{"id":"bangla-006","category":"bangla","prompt":"কৃত্রিম বুদ্ধিমত্তা (AI) কী?","expected":"বুদ্ধিমত্তা"}
+{"id":"bangla-007","category":"bangla","prompt":"ক্লাউড কম্পিউটিং বলতে কী বোঝায়?","expected":"ইন্টারনেট"}
+{"id":"bangla-008","category":"bangla","prompt":"একটি পূর্ণাঙ্গ ওয়েবসাইটে ব্যাকএন্ডের ভূমিকা কী?","expected":"সার্ভার"}
+{"id":"bangla-009","category":"bangla","prompt":"সাইবার নিরাপত্তা কেন গুরুত্বপূর্ণ?","expected":"সুরক্ষা"}
+{"id":"bangla-010","category":"bangla","prompt":"গিটহাব (GitHub) কী ধরনের প্ল্যাটফর্ম?","expected":"কোড"}
+{"id":"bangla-011","category":"bangla","prompt":"সফটওয়্যার ইঞ্জিনিয়ারিংয়ে গিট (Git) কেন ব্যবহার করা হয়?","expected":"ভার্সন কন্ট্রোল"}
+{"id":"bangla-012","category":"bangla","prompt":"এইচটিটিপি (HTTP) এবং এইচটিটিপিএস (HTTPS)-এর মূল পার্থক্য কী?","expected":"এসএসএল বা এনক্রিপশন"}
+{"id":"bangla-013","category":"bangla","prompt":"একটি পূর্ণাঙ্গ ডাটাবেজে প্রাইমারি কি (Primary Key)-এর কাজ কী?","expected":"অনন্যভাবে শনাক্ত"}
+{"id":"bangla-014","category":"bangla","prompt":"মেশিন লার্নিং এবং ডিপ লার্নিংয়ের প্রধান পার্থক্য কী?","expected":"নিউরাল নেটওয়ার্ক"}
+{"id":"bangla-015","category":"bangla","prompt":"কম্পাইলড ল্যাঙ্গুয়েজ এবং ইন্টারপ্রেটেড ল্যাঙ্গুয়েজের মধ্যে পার্থক্য কী?","expected":"অনুবাদ প্রক্রিয়া"}
+{"id":"bangla-016","category":"bangla","prompt":"ডকার (Docker) কনটেইনার প্রযুক্তি ব্যবহারের প্রধান সুবিধা কী?","expected":"পরিবেশের সামঞ্জস্যতা"}
+{"id":"bangla-017","category":"bangla","prompt":"কুবারনেটিস (Kubernetes) দিয়ে সফটওয়্যার সিস্টেমে কী করা হয়?","expected":"কনটেইনার অর্কেস্ট্রেশন"}
+{"id":"bangla-018","category":"bangla","prompt":"ক্লাউড স্টোরেজ কী এবং এটি কীভাবে কাজ করে?","expected":"দূরবর্তী সার্ভার"}
+{"id":"bangla-019","category":"bangla","prompt":"সিপিইউ (CPU)-কে কেন কম্পিউটারের মস্তিষ্ক বলা হয়?","expected":"নির্দেশনা কার্যকর"}
+{"id":"bangla-020","category":"bangla","prompt":"র‍্যাম (RAM) এবং রমের (ROM) প্রধান পার্থক্য কী?","expected":"অস্থায়ী বনাম স্থায়ী"}
+{"id":"bangla-021","category":"bangla","prompt":"বাংলাদেশে আইটি খাতে ফ্রিল্যান্সিং কেন জনপ্রিয় হয়ে উঠছে?","expected":"বৈদেশিক মুদ্রা"}
+{"id":"bangla-022","category":"bangla","prompt":"অবজেক্ট-ওরিয়েন্টেড প্রোগ্রামিং (OOP)-এর চারটি মূল স্তম্ভ কী কী?","expected":"ইনক্যাপসুলেশন, পলিমরফিজম, ইনহেরিটেন্স, অ্যাবস্ট্রাকশন"}
+{"id":"bangla-023","category":"bangla","prompt":"এসকিউএল (SQL) ইনজেকশন আক্রমণ কী এবং এটি কীভাবে প্রতিরোধ করা যায়?","expected":"ইনপুট স্যানিটাইজেশন"}
+{"id":"bangla-024","category":"bangla","prompt":"ক্রিপ্টোকারেন্সি কী এবং এটি কোন প্রযুক্তির ওপর ভিত্তি করে চলে?","expected":"ব্লকচেইন"}
+{"id":"bangla-025","category":"bangla","prompt":"টু-ফ্যাক্টর অথেন্টিকেশন (2FA) কেন ব্যবহার করা জরুরি?","expected":"অতিরিক্ত নিরাপত্তা"}
+{"id":"bangla-026","category":"bangla","prompt":"ডাটা স্ট্রাকচারে অ্যারে এবং লিংকড লিস্টের মধ্যে প্রধান পার্থক্য কী?","expected":"মেমরি বরাদ্দ"}
+{"id":"bangla-027","category":"bangla","prompt":"রেস্টুল এপিআই (RESTful API)-তে GET এবং POST মেথডের তফাত কী?","expected":"উপাত্ত পড়া বনাম পাঠানো"}
+{"id":"bangla-028","category":"bangla","prompt":"কম্পিউটার নেটওয়ার্কে আইপি (IP) অ্যাড্রেস কী কাজে লাগে?","expected":"ডিভাইসের ঠিকানা"}
+{"id":"bangla-029","category":"bangla","prompt":"ডিএনএস (DNS) কীভাবে একটি ডোমেইন নামকে সার্ভারের সাথে যুক্ত করে?","expected":"আইপি ঠিকানায় রূপান্তর"}
+{"id":"bangla-030","category":"bangla","prompt":"জাভাস্ক্রিপ্টে সিঙ্ক্রোনাস এবং অ্যাসিঙ্ক্রোনাস কোডের পার্থক্য কী?","expected":"ব্লকিং বনাম নন-ব্লকিং"}
+{"id":"bangla-031","category":"bangla","prompt":"মাইক্রোসার্ভিসেস আর্কিটেকচার কেন বড় সিস্টেমে ব্যবহৃত হয়?","expected":"স্বাধীন ডিপ্লয়মেন্ট"}
+{"id":"bangla-032","category":"bangla","prompt":"সফটওয়্যার টেস্টিংয়ে ইউনিট টেস্টিং বলতে কী বোঝায়?","expected":"নির্দিষ্ট অংশের পরীক্ষা"}
+{"id":"bangla-033","category":"bangla","prompt":"লিনাক্স অপারেটিং সিস্টেম কেন ডেভেলপারদের কাছে জনপ্রিয়?","expected":"ওপেন সোর্স এবং নিয়ন্ত্রণ"}
+{"id":"bangla-034","category":"bangla","prompt":"ক্যাশ মেমোরি কীভাবে সিস্টেমের কাজের গতি বৃদ্ধি করে?","expected":"দ্রুত ডেটা অ্যাক্সেস"}
+{"id":"bangla-035","category":"bangla","prompt":"একটি ওয়েবসাইটে ফ্রন্টএন্ড এবং ব্যাকএন্ড কীভাবে পরস্পরের সাথে যোগাযোগ করে?","expected":"এপিআই"}
+{"id":"bangla-036","category":"bangla","prompt":"মেশিন লার্নিংয়ে সুপারভাইজড লার্নিং কী?","expected":"লেবেলযুক্ত ডেটা"}
+{"id":"bangla-037","category":"bangla","prompt":"আনসুপারভাইজড লার্নিংয়ে কীভাবে প্যাটার্ন শনাক্ত করা হয়?","expected":"ক্লাস্টারিং বা প্যাটার্ন"}
+{"id":"bangla-038","category":"bangla","prompt":"সিআই/সিডি (CI/CD) পাইপলাইনের মূল উদ্দেশ্য কী?","expected":"স্বয়ংক্রিয় ডেলিভারি"}
+{"id":"bangla-039","category":"bangla","prompt":"সফটওয়্যারে বাগ (Bug) বা ত্রুটি খুঁজে পাওয়ার প্রক্রিয়াকে কী বলে?","expected":"ডিবাগিং"}
+{"id":"bangla-040","category":"bangla","prompt":"নোএসকিউএল (NoSQL) ডাটাবেজ যেমন মঙ্গোডিবি কখন ব্যবহার করা উচিত?","expected":"আনস্ট্রাকচার্ড ডেটা"}
+{"id":"bangla-041","category":"bangla","prompt":"কম্পিউটার সিকিউরিটিতে ফায়ারওয়াল (Firewall)-এর কাজ কী?","expected":"নেটওয়ার্ক ট্র্যাফিক ফিল্টার"}
+{"id":"bangla-042","category":"bangla","prompt":"ভার্চুয়াল প্রাইভেট নেটওয়ার্ক (VPN) কীভাবে ব্যবহারকারীর পরিচয় সুরক্ষিত রাখে?","expected":"আইপি গোপন ও এনক্রিপশন"}
+{"id":"bangla-043","category":"bangla","prompt":"অ্যালগরিদমের সময় জটিলতা (Time Complexity) বলতে কী বোঝায়?","expected":"রানটাইমের হিসাব বা বিগ ও"}
+{"id":"bangla-044","category":"bangla","prompt":"বাইনারি সার্চ অ্যালগরিদম ব্যবহারের পূর্বশর্ত কী?","expected":"সর্টেড বা সাজানো ডেটা"}
+{"id":"bangla-045","category":"bangla","prompt":"কম্পিউটার মেমোরিতে স্ট্যাক এবং হিপ মেমোরির তফাত কী?","expected":"স্ট্যাটিক বনাম ডাইনামিক বরাদ্দ"}
+{"id":"bangla-046","category":"bangla","prompt":"ফিশিং আক্রমণ কী এবং এর হাত থেকে কীভাবে বাঁচা যায়?","expected":"প্রতারণামূলক লিঙ্ক বা বার্তা"}
+{"id":"bangla-047","category":"bangla","prompt":"এসএসডি (SSD) কেন গতানুগতিক হার্ডডিস্ক (HDD)-এর চেয়ে দ্রুত কাজ করে?","expected":"ফ্ল্যাশ মেমোরি"}
+{"id":"bangla-048","category":"bangla","prompt":"প্রোগ্রামিংয়ে রিকার্শন (Recursion) কীভাবে কাজ করে?","expected":"ফাংশন নিজে নিজেকে কল করে"}
+{"id":"bangla-049","category":"bangla","prompt":"লার্জ ল্যাঙ্গুয়েজ মডেল (LLM) কী প্রযুক্তির ওপর নির্মিত?","expected":"ট্রান্সফরমার আর্কিটেকচার"}
+{"id":"bangla-050","category":"bangla","prompt":"প্রোগ্রামিংয়ে ভ্যারিয়েবল বা চলক বলতে কী বোঝায়?","expected":"মান সংরক্ষণের স্থান"}
+{"id":"bangla-051","category":"bangla","prompt":"ক্লাউড কম্পিউটিংয়ে SaaS, PaaS এবং IaaS-এর সম্পূর্ণ রূপ কী?","expected":"Software, Platform, Infrastructure as a Service"}
+{"id":"bangla-052","category":"bangla","prompt":"একটি ওয়েবসাইটের এসইও (SEO) কেন গুরুত্বপূর্ণ?","expected":"সার্চ ইঞ্জিনের র‍্যাঙ্কিং"}
+{"id":"bangla-053","category":"bangla","prompt":"ডাটাবেজে ইনডেক্সিং করলে কী সুবিধা পাওয়া যায়?","expected":"দ্রুত অনুসন্ধান"}
+{"id":"bangla-054","category":"bangla","prompt":"সফটওয়্যারের ডেডলক (Deadlock) সমস্যা কী?","expected":"পরস্পরের জন্য অপেক্ষা"}
+{"id":"bangla-055","category":"bangla","prompt":"প্রোগ্রামিংয়ে পলিমরফিজম (Polymorphism) শব্দের অর্থ কী?","expected":"বহুরূপতা"}
+{"id":"bangla-056","category":"bangla","prompt":"রেডিস (Redis) ডাটাবেজ কেন এত দ্রুত কাজ করে?","expected":"ইন-মেমোরি সংরক্ষণ"}
+{"id":"bangla-057","category":"bangla","prompt":"ওয়েব সিকিউরিটিতে ক্রস-সাইট স্ক্রিপ্টিং (XSS) কী?","expected":"ম্যালিশিয়াস স্ক্রিপ্ট ইঞ্জেকশন"}
+{"id":"bangla-058","category":"bangla","prompt":"সফটওয়্যার ডেভেলপমেন্টে এজাইল (Agile) পদ্ধতির সুবিধা কী?","expected":"ধাপে ধাপে দ্রুত উন্নয়ন"}
+{"id":"bangla-059","category":"bangla","prompt":"গ্রাফ ডাটাবেজ কোন ধরনের তথ্যের জন্য সবচেয়ে উপযোগী?","expected":"সম্পর্কযুক্ত নেটওয়ার্ক ডেটা"}
+{"id":"bangla-060","category":"bangla","prompt":"কম্পিউটার অপারেটিং সিস্টেমে কার্নেল (Kernel)-এর ভূমিকা কী?","expected":"হার্ডওয়্যার ও সফটওয়্যারের সংযোগ"}
+{"id":"bangla-061","category":"bangla","prompt":"মোবাইল অ্যাপ ডেভেলপমেন্টে ক্রস-প্ল্যাটফর্ম ফ্রেমওয়ার্কের সুবিধা কী?","expected":"একই কোডে একাধিক প্ল্যাটফর্ম"}
+{"id":"bangla-062","category":"bangla","prompt":"পাসওয়ার্ড সংরক্ষণে হ্যাশিং এবং সল্টিং কেন করা হয়?","expected":"নিরাপত্তা বৃদ্ধি"}
+{"id":"bangla-063","category":"bangla","prompt":"ওয়েবসাইটে সিএসএস (CSS)-এর ভূমিকা কী?","expected":"ডিজাইন ও স্টাইলিং"}
+{"id":"bangla-064","category":"bangla","prompt":"জেসন (JSON) ফরম্যাট কেন এত বহুলভাবে ব্যবহৃত হয়?","expected":"হালকা এবং সহজে পড়ার উপযোগী"}
+{"id":"bangla-065","category":"bangla","prompt":"ল্যাম্বডা ফাংশন বা অ্যানোনিমাস ফাংশন কাকে বলে?","expected":"নামহীন ফাংশন"}
+{"id":"bangla-066","category":"bangla","prompt":"কম্পিউটার গ্রাফিক্সে জিপিইউ (GPU)-এর মূল ভূমিকা কী?","expected":"প্যারালাল প্রসেসিং"}
+{"id":"bangla-067","category":"bangla","prompt":"সফটওয়্যার আর্কিটেকচারে ইভেন্ট-ড্রিভেন আর্কিটেকচার কী?","expected":"ইভেন্টের ভিত্তিতে প্রতিক্রিয়া"}
+{"id":"bangla-068","category":"bangla","prompt":"ওয়েব ব্রাউজারে কুকি (Cookie) এবং লোকাল স্টোরেজের পার্থক্য কী?","expected":"সার্ভারে স্বয়ংক্রিয় পাঠানো"}
+{"id":"bangla-069","category":"bangla","prompt":"ভার্চুয়াল মেশিন এবং ডকার কন্টেইনারের মধ্যে পার্থক্য কী?","expected":"গেস্ট ওএস থাকা না থাকা"}
+{"id":"bangla-070","category":"bangla","prompt":"প্রোগ্রামিংয়ে নাল পয়েন্টার এক্সেপশন (Null Pointer Exception) কেন ঘটে?","expected":"শূন্য মেমরি রেফারেন্স"}
+{"id":"bangla-071","category":"bangla","prompt":"কম্পিউটার নেটওয়ার্কে টিসিপি এবং ইউডিপির পার্থক্য কী?","expected":"নির্ভরযোগ্যতা বনাম গতি"}
+{"id":"bangla-072","category":"bangla","prompt":"ওপেন সোর্স সফটওয়্যার ব্যবহারের ব্যবসায়িক সুবিধা কী?","expected":"খরচ কমানো এবং কাস্টমাইজেশন"}
+{"id":"bangla-073","category":"bangla","prompt":"প্রাকৃতিক ভাষা প্রক্রিয়াকরণ (NLP) কোন কাজে ব্যবহৃত হয়?","expected":"মানুষের ভাষা বোঝা"}
+{"id":"bangla-074","category":"bangla","prompt":"ওয়েব সকেট (WebSocket) প্রোটোকল কেন রিয়েল-টাইম চ্যাটে ব্যবহৃত হয়?","expected":"দ্বিমুখী সংযোগ"}
+{"id":"bangla-075","category":"bangla","prompt":"কম্পিউটার ভাইরাসের সাথে ট্রোজান হর্সের পার্থক্য কী?","expected":"স্বয়ংক্রিয় বিস্তার বনাম ছদ্মবেশ"}
+{"id":"bangla-076","category":"bangla","prompt":"সফটওয়্যারের গিট রিবেস (Git Rebase) এবং গিট মার্জের মধ্যে পার্থক্য কী?","expected":"হিস্ট্রি সাজানো"}
+{"id":"bangla-077","category":"bangla","prompt":"প্রোগ্রামিংয়ে মেমরি লিক (Memory Leak) কীভাবে সিস্টেমে প্রভাব ফেলে?","expected":"মেমরি শেষ হয়ে সিস্টেম ক্র্যাশ"}
+{"id":"bangla-078","category":"bangla","prompt":"ডাটাবেজে নরমালাইজেশনের মূল লক্ষ্য কী?","expected":"রিডানডেন্সি দূর করা"}
+{"id":"bangla-079","category":"bangla","prompt":"ক্লাউডে সার্ভারলেস আর্কিটেকচারের সুবিধা কী?","expected":"সার্ভার ব্যবস্থাপনার প্রয়োজন নেই"}
+{"id":"bangla-080","category":"bangla","prompt":"লোড ব্যালেন্সার কীভাবে ট্র্যাফিক বণ্টন করে?","expected":"একাধিক সার্ভারের মধ্যে সমান ভাগ"}
+{"id":"bangla-081","category":"bangla","prompt":"কম্পিউটার বিজ্ঞানে কিউ (Queue) ডাটা স্ট্রাকচার কোন নীতি মেনে চলে?","expected":"FIFO বা প্রথমে এলে প্রথমে সেবা"}
+{"id":"bangla-082","category":"bangla","prompt":"স্ট্যাক (Stack) ডাটা স্ট্রাকচার কোন নিয়মে কাজ করে?","expected":"LIFO বা শেষে এলে প্রথমে সেবা"}
+{"id":"bangla-083","category":"bangla","prompt":"সাইবার সিকিউরিটিতে ডিডস (DDoS) আক্রমণের প্রক্রিয়া কী?","expected":"অতিরিক্ত ট্র্যাফিক পাঠিয়ে অচল করা"}
+{"id":"bangla-084","category":"bangla","prompt":"সফটওয়্যারে রেট লিমিটিং (Rate Limiting) কেন দেওয়া হয়?","expected":"অতিরিক্ত অনুরোধ প্রতিরোধ"}
+{"id":"bangla-085","category":"bangla","prompt":"ক্লাউড ডেটাবেজে ব্যাকআপ ও রিকভারি কেন আবশ্যক?","expected":"ডেটা বিপর্যয় রোধ"}
+{"id":"bangla-086","category":"bangla","prompt":"কম্পিউটারে বায়োস (BIOS)-এর প্রাথমিক কাজ কী?","expected":"হার্ডওয়্যার বুটিং শুরু করা"}
+{"id":"bangla-087","category":"bangla","prompt":"রিঅ্যাক্ট (React) ফ্রেমওয়ার্কে ভার্চুয়াল ডম (Virtual DOM) কীভাবে কাজ করে?","expected":"কম্পোনেন্ট রি-রেন্ডারিং অপ্টিমাইজ"}
+{"id":"bangla-088","category":"bangla","prompt":"প্রোগ্রামিং ভাষায় টাইপ স্ক্রিপ্ট (TypeScript) ব্যবহারের সুবিধা কী?","expected":"স্ট্যাটিক টাইপিং"}
+{"id":"bangla-089","category":"bangla","prompt":"লিনাক্সে ফাইল পারমিশন rwx বলতে কী বোঝায়?","expected":"Read, Write, Execute"}
+{"id":"bangla-090","category":"bangla","prompt":"পাবলিক ও প্রাইভেট কি এনক্রিপশন কীভাবে সুরক্ষা নিশ্চিত করে?","expected":"অপ্রতিসম চাবি জোড়া"}
+{"id":"bangla-091","category":"bangla","prompt":"সফটওয়্যারে কোড রিফ্যাক্টরিং বলতে কী বোঝায়?","expected":"কার্যকারিতা অক্ষুণ্ণ রেখে কোড মান উন্নত করা"}
+{"id":"bangla-092","category":"bangla","prompt":"আইওটি (IoT) ডিভাইসগুলো সাধারণত কীভাবে তথ্য পাঠায়?","expected":"সেন্সর ও ইন্টারনেট প্রোটোকল"}
+{"id":"bangla-093","category":"bangla","prompt":"ডাটাবেজে ট্রানজ্যাকশনের এসিড (ACID) প্রোপার্টির অর্থ কী?","expected":"Atomicity, Consistency, Isolation, Durability"}
+{"id":"bangla-094","category":"bangla","prompt":"ওয়েবসাইট পারফরম্যান্স বাড়াতে ব্রাউজার ক্যাশিং কীভাবে সাহায্য করে?","expected":"স্থানীয় ডিভাইসে ফাইল জমা রাখা"}
+{"id":"bangla-095","category":"bangla","prompt":"প্রোগ্রামিংয়ে ডিপ কপি এবং শ্যালো কপির মূল পার্থক্য কী?","expected":"মেমরি রেফারেন্স বনাম নতুন কপি"}
+{"id":"bangla-096","category":"bangla","prompt":"সফটওয়্যার সিকিউরিটিতে জিরো-ডে ভালনারেবিলিটি (Zero-Day Vulnerability) কী?","expected":"অজ্ঞাত ও অমীমাংসিত ত্রুটি"}
+{"id":"bangla-097","category":"bangla","prompt":"এজ কম্পিউটিং কীভাবে ক্লাউড লেটেন্সি কমিয়ে আনে?","expected":"উৎসস্থলের কাছে প্রসেসিং"}
+{"id":"bangla-098","category":"bangla","prompt":"গ্রাফিক্সে ভেক্টর ইমেজ এবং রাস্টার ইমেজের প্রধান পার্থক্য কী?","expected":"স্কেলেবিলিটি এবং পিক্সেল"}
+{"id":"bangla-099","category":"bangla","prompt":"সফটওয়্যারে সিঙ্গলটন ডিজাইন প্যাটার্ন (Singleton Pattern) কী নিশ্চিত করে?","expected":"একটি মাত্র ইন্সট্যান্স"}
+{"id":"bangla-100","category":"bangla","prompt":"মেশিন লার্নিং মডেলের ওভারফিটিং (Overfitting) সমস্যা কীভাবে দূর করা যায়?","expected":"ড্রপআউট ও রেগুলারাইজেশন"}
+{"id":"bangla-101","category":"bangla","prompt":"সফটওয়্যারে রিগ্রেশন টেস্টিং কখন করা উচিত?","expected":"নতুন কোড বা ফিচার যোগ করার পর"}
+{"id":"bangla-102","category":"bangla","prompt":"এপিআই গেটওয়ে (API Gateway)-এর দায়িত্ব কী?","expected":"রিকোয়েস্ট রাউটিং ও নিরাপত্তা"}
+{"id":"bangla-103","category":"bangla","prompt":"মোবাইল অ্যাপে পুশ নোটিফিকেশন কীভাবে কাজ করে?","expected":"ক্লাউড মেসেজিং সার্ভিস"}
+{"id":"bangla-104","category":"bangla","prompt":"সফটওয়্যার কোডে ডিপেনডেন্সি ইনজেকশন (Dependency Injection) কেন ব্যবহার করা হয়?","expected":"ডিকাপলিং বা সহজ পরিবর্তন"}
+{"id":"bangla-105","category":"bangla","prompt":"প্রোগ্রামিংয়ে ইমিউটেবল (Immutable) ডাটা স্ট্রাকচার বলতে কী বোঝায়?","expected":"পরিবর্তন অযোগ্য"}
+{"id":"bangla-106","category":"bangla","prompt":"ডাটাবেজ শার্ডিং (Sharding) প্রক্রিয়া কীভাবে স্কেলেবিলিটি বাড়ায়?","expected":"অনুভূমিক ডেটা বিভাজন"}
+{"id":"bangla-107","category":"bangla","prompt":"সফটওয়্যারে প্রমিজ (Promise) ব্যবহারের প্রধান কারণ কী?","expected":"অ্যাসিঙ্ক্রোনাস কাজের ফলাফল নিয়ন্ত্রণ"}
+{"id":"bangla-108","category":"bangla","prompt":"সিএসএস গ্রিড এবং ফ্লেক্সবক্সের মধ্যে ব্যবহারের পার্থক্য কী?","expected":"দ্বিমাত্রিক বনাম একমাত্রিক লেআউট"}
+{"id":"bangla-109","category":"bangla","prompt":"কম্পিউটার সিকিউরিটিতে ম্যান-ইন-দ্য-মিডল (MITM) আক্রমণ কীভাবে ঘটে?","expected":"যোগাযোগের মাঝে তথ্য চুরি"}
+{"id":"bangla-110","category":"bangla","prompt":"ক্লাউড ডেভঅপ্স (DevOps) কালচারের মূল লক্ষ্য কী?","expected":"উন্নয়ন ও অপারেশনের গতিশীল সমন্বয়"}

@@ -1,1 +1,0 @@
-import ResourcePage from "@/components/ui/ResourcePage";export default function Page(){return <ResourcePage title="Models" description="Provider/model routing and local model discovery" path="/models/local"/>}

@@ -1,1 +1,0 @@
-import ResourcePage from "@/components/ui/ResourcePage";export default function Page(){return <ResourcePage title="Model Lab" description="EVU architecture, tokenizer and training workspace." path="/research/training/validate"/>}

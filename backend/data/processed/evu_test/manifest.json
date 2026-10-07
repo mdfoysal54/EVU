@@ -1,0 +1,28 @@
+{
+  "name": "evu-test",
+  "version": "v1",
+  "source_count": 1,
+  "train_records": 2,
+  "validation_records": 1,
+  "files": [
+    "train-00000.jsonl",
+    "validation-00000.jsonl"
+  ],
+  "provenance": [
+    {
+      "source": "unknown",
+      "license": null
+    }
+  ],
+  "metadata": {
+    "input_records": 3,
+    "accepted_records": 3,
+    "rejected_records": 0,
+    "duplicate_records": 0,
+    "quality": {
+      "min_chars": 20,
+      "min_words": 8
+    }
+  },
+  "created_at": "2026-10-06T19:01:23.990610+00:00"
+}

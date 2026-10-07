@@ -1,1 +1,0 @@
-import ResourcePage from "@/components/ui/ResourcePage";export default function Page(){return <ResourcePage title="Codebase Intelligence" description="Reserved workspace for code graph, symbols and impact analysis." path="/execution/tools"/>}

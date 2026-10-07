@@ -1,1 +1,0 @@
-import ResourcePage from "@/components/ui/ResourcePage";export default function Page(){return <ResourcePage title="Research / Model Lab" description="Dataset construction and training validation endpoints" path="/research/training/validate"/>}

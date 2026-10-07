@@ -1,1 +1,0 @@
-import ResourcePage from "@/components/ui/ResourcePage";export default function Page(){return <ResourcePage title="Execution Tools" description="Registered tools exposed by the execution engine" path="/execution/tools"/>}

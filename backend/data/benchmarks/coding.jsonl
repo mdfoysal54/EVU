@@ -1,0 +1,110 @@
+{"id":"coding-001","category":"coding","prompt":"Write a Python function that adds two numbers.","expected":"def add"}
+{"id":"coding-002","category":"coding","prompt":"Write a Python function to reverse a string.","expected":"def reverse"}
+{"id":"coding-003","category":"coding","prompt":"Write a JavaScript function to check if a number is even.","expected":"function isEven"}
+{"id":"coding-004","category":"coding","prompt":"Write an SQL query to select all users older than 18 from table users.","expected":"SELECT * FROM users WHERE age > 18;"}
+{"id":"coding-005","category":"coding","prompt":"Write a Python function to check if a string is a palindrome.","expected":"def is_palindrome"}
+{"id":"coding-006","category":"coding","prompt":"Write a Bash command to find all .log files in /var/log.","expected":"find /var/log -name \"*.log\""}
+{"id":"coding-007","category":"coding","prompt":"Write a Python list comprehension to get squares of numbers from 0 to 9.","expected":"[x**2 for x in range(10)]"}
+{"id":"coding-008","category":"coding","prompt":"Write an SQL statement to insert a user with name 'Alice' into table users.","expected":"INSERT INTO users"}
+{"id":"coding-009","category":"coding","prompt":"Write a TypeScript type alias for a User with id (number) and name (string).","expected":"type User ="}
+{"id":"coding-010","category":"coding","prompt":"Write a Python function that returns the maximum element in a list.","expected":"def find_max"}
+{"id":"coding-011","category":"coding","prompt":"Write a Python function to compute the factorial of a non-negative integer recursively.","expected":"def factorial"}
+{"id":"coding-012","category":"coding","prompt":"Write a JavaScript function that debounces another function with a given delay.","expected":"function debounce"}
+{"id":"coding-013","category":"coding","prompt":"Write an SQL query to find the second highest salary from an Employee table.","expected":"SELECT MAX(salary)"}
+{"id":"coding-014","category":"coding","prompt":"Write a Python function to check whether two strings are anagrams.","expected":"def is_anagram"}
+{"id":"coding-015","category":"coding","prompt":"Write a TypeScript function to flatten a nested array of arbitrary depth.","expected":"function flatten"}
+{"id":"coding-016","category":"coding","prompt":"Write a Bash script snippet to check if a directory exists before creating it.","expected":"if [ ! -d"}
+{"id":"coding-017","category":"coding","prompt":"Write a Python function implementing binary search on a sorted list.","expected":"def binary_search"}
+{"id":"coding-018","category":"coding","prompt":"Write an SQL statement to create an index on the email column of users.","expected":"CREATE INDEX"}
+{"id":"coding-019","category":"coding","prompt":"Write a Go function to reverse a slice of strings in place.","expected":"func reverse"}
+{"id":"coding-020","category":"coding","prompt":"Write a Python generator function that yields Fibonacci numbers up to n.","expected":"def fibonacci"}
+{"id":"coding-021","category":"coding","prompt":"Write a Dockerfile line to set the working directory to /app.","expected":"WORKDIR /app"}
+{"id":"coding-022","category":"coding","prompt":"Write a Python regular expression pattern to validate a standard IPv4 address.","expected":"r'^((25[0-5]"}
+{"id":"coding-023","category":"coding","prompt":"Write a JavaScript function to deep clone an object without functions.","expected":"structuredClone"}
+{"id":"coding-024","category":"coding","prompt":"Write an SQL query using an INNER JOIN between orders and customers on customer_id.","expected":"INNER JOIN"}
+{"id":"coding-025","category":"coding","prompt":"Write a Python function to merge two sorted dictionaries by key.","expected":"def merge_dicts"}
+{"id":"coding-026","category":"coding","prompt":"Write a C++ class definition for a basic singly linked list node.","expected":"struct Node"}
+{"id":"coding-027","category":"coding","prompt":"Write a Python function to count occurrences of each word in a string.","expected":"Counter"}
+{"id":"coding-028","category":"coding","prompt":"Write a Rust function that takes two i32 values and returns their sum.","expected":"pub fn add"}
+{"id":"coding-029","category":"coding","prompt":"Write an SQL query to delete duplicate rows from a table while keeping the lowest id.","expected":"DELETE FROM"}
+{"id":"coding-030","category":"coding","prompt":"Write a Python decorator that measures and prints execution time of a function.","expected":"def timer"}
+{"id":"coding-031","category":"coding","prompt":"Write a TypeScript generic interface for a PaginatedResponse.","expected":"interface PaginatedResponse<T>"}
+{"id":"coding-032","category":"coding","prompt":"Write a Python function to find the intersection of two lists without duplicates.","expected":"set(a) & set(b)"}
+{"id":"coding-033","category":"coding","prompt":"Write an HTML snippet linking an external stylesheet named styles.css.","expected":"<link rel=\"stylesheet\" href=\"styles.css\">"}
+{"id":"coding-034","category":"coding","prompt":"Write a Python function to validate whether an email address format is valid using regex.","expected":"re.match"}
+{"id":"coding-035","category":"coding","prompt":"Write a Bash command to find and replace all instances of 'foo' with 'bar' in a file.","expected":"sed -i 's/foo/bar/g'"}
+{"id":"coding-036","category":"coding","prompt":"Write a JavaScript Promise that resolves after a specified number of milliseconds.","expected":"new Promise"}
+{"id":"coding-037","category":"coding","prompt":"Write an SQL query using GROUP BY and HAVING to find departments with more than 5 employees.","expected":"HAVING count(*)"}
+{"id":"coding-038","category":"coding","prompt":"Write a Python class implementing a basic Stack with push, pop, and peek methods.","expected":"class Stack"}
+{"id":"coding-039","category":"coding","prompt":"Write a React functional component that renders a button incrementing a counter state.","expected":"useState"}
+{"id":"coding-040","category":"coding","prompt":"Write a Python function to read a JSON file safely and return its contents as a dict.","expected":"json.load"}
+{"id":"coding-041","category":"coding","prompt":"Write a Git command to discard all unstaged local changes in the working tree.","expected":"git restore ."}
+{"id":"coding-042","category":"coding","prompt":"Write an SQL query to retrieve records created within the last 7 days.","expected":"NOW() - INTERVAL"}
+{"id":"coding-043","category":"coding","prompt":"Write a Python function to serialize a datetime object to an ISO 8601 string.","expected":"isoformat()"}
+{"id":"coding-044","category":"coding","prompt":"Write a CSS rule to center a div horizontally and vertically using flexbox.","expected":"justify-content: center; align-items: center;"}
+{"id":"coding-045","category":"coding","prompt":"Write a Python function to flatten a 2D matrix into a 1D list.","expected":"[item for row in matrix for item in row]"}
+{"id":"coding-046","category":"coding","prompt":"Write a Go HTTP handler function that writes 'pong' back for health checks.","expected":"w.Write([]byte(\"pong\"))"}
+{"id":"coding-047","category":"coding","prompt":"Write an SQL query to calculate running total of sales ordered by sale_date using window functions.","expected":"SUM(amount) OVER (ORDER BY"}
+{"id":"coding-048","category":"coding","prompt":"Write a Python context manager using contextlib to temporarily change current directory.","expected":"@contextmanager"}
+{"id":"coding-049","category":"coding","prompt":"Write a TypeScript enum representing HTTP methods GET, POST, PUT, DELETE.","expected":"enum HttpMethod"}
+{"id":"coding-050","category":"coding","prompt":"Write a Python function to remove all whitespace characters from a string.","expected":"''.join(s.split())"}
+{"id":"coding-051","category":"coding","prompt":"Write a Bash script line that outputs the exit code of the immediately preceding command.","expected":"echo $?"}
+{"id":"coding-052","category":"coding","prompt":"Write a Java method signature that accepts a List of Strings and returns sorted list.","expected":"public List<String> sortStrings"}
+{"id":"coding-053","category":"coding","prompt":"Write a Python function to check whether a given binary tree is symmetric.","expected":"def is_symmetric"}
+{"id":"coding-054","category":"coding","prompt":"Write an SQL command to drop a foreign key constraint named fk_user from orders table.","expected":"ALTER TABLE orders DROP CONSTRAINT fk_user"}
+{"id":"coding-055","category":"coding","prompt":"Write a JavaScript fetch request sending JSON data with POST method.","expected":"headers: {'Content-Type': 'application/json'}"}
+{"id":"coding-056","category":"coding","prompt":"Write a Python function to generate random UUID version 4 string.","expected":"uuid.uuid4()"}
+{"id":"coding-057","category":"coding","prompt":"Write a CSS media query for devices with viewport width 768px or less.","expected":"@media (max-width: 768px)"}
+{"id":"coding-058","category":"coding","prompt":"Write a Python function to calculate the greatest common divisor using Euclidean algorithm.","expected":"def gcd(a, b)"}
+{"id":"coding-059","category":"coding","prompt":"Write an SQL query to concatenate first_name and last_name with a space as full_name.","expected":"CONCAT(first_name, ' ', last_name)"}
+{"id":"coding-060","category":"coding","prompt":"Write a TypeScript utility type making all properties in an interface optional except 'id'.","expected":"Omit<Partial<T>, 'id'>"}
+{"id":"coding-061","category":"coding","prompt":"Write a Python function to chunk a list into sublists of size k.","expected":"[lst[i:i + k] for i in range(0, len(lst), k)]"}
+{"id":"coding-062","category":"coding","prompt":"Write a Docker Compose service definition snippet for running Redis on port 6379.","expected":"image: redis"}
+{"id":"coding-063","category":"coding","prompt":"Write a Python function using hashlib to compute the SHA-256 hash of a string.","expected":"hashlib.sha256"}
+{"id":"coding-064","category":"coding","prompt":"Write a JavaScript arrow function that filters an array of numbers to keep only primes.","expected":".filter("}
+{"id":"coding-065","category":"coding","prompt":"Write an SQL command to add a NOT NULL column 'status' with default 'pending' to tasks.","expected":"ALTER TABLE tasks ADD COLUMN status VARCHAR(50) DEFAULT 'pending' NOT NULL"}
+{"id":"coding-066","category":"coding","prompt":"Write a Python function implementing an LRU cache decorator or class.","expected":"OrderedDict"}
+{"id":"coding-067","category":"coding","prompt":"Write a Rust match statement handling Result<T, E> by printing error or returning value.","expected":"match result"}
+{"id":"coding-068","category":"coding","prompt":"Write a Bash command to display top 5 memory-consuming processes.","expected":"ps aux --sort=-%mem | head -n 6"}
+{"id":"coding-069","category":"coding","prompt":"Write a Python function to check whether a year is a leap year.","expected":"(year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)"}
+{"id":"coding-070","category":"coding","prompt":"Write an SQL query using COALESCE to replace NULL phone numbers with 'N/A'.","expected":"COALESCE(phone, 'N/A')"}
+{"id":"coding-071","category":"coding","prompt":"Write a JavaScript throttle function that enforces a maximum execution frequency.","expected":"function throttle"}
+{"id":"coding-072","category":"coding","prompt":"Write a Python function to find the first non-repeating character in a string.","expected":"def first_unique_char"}
+{"id":"coding-073","category":"coding","prompt":"Write a Git command to create and switch to a new branch named 'feature-auth'.","expected":"git checkout -b feature-auth"}
+{"id":"coding-074","category":"coding","prompt":"Write a Python function using socket to test if a TCP port on a remote host is open.","expected":"socket.connect_ex"}
+{"id":"coding-075","category":"coding","prompt":"Write an SQL statement creating a view named active_users for users with active=true.","expected":"CREATE VIEW active_users AS"}
+{"id":"coding-076","category":"coding","prompt":"Write a TypeScript guard function to check if a value is of type string.","expected":"val is string"}
+{"id":"coding-077","category":"coding","prompt":"Write a Python function to convert a snake_case string to camelCase.","expected":"def snake_to_camel"}
+{"id":"coding-078","category":"coding","prompt":"Write a C snippet to dynamically allocate memory for an array of 10 integers.","expected":"malloc(10 * sizeof(int))"}
+{"id":"coding-079","category":"coding","prompt":"Write a Python asyncio function that sleeps for 2 seconds asynchronously.","expected":"await asyncio.sleep(2)"}
+{"id":"coding-080","category":"coding","prompt":"Write an SQL query to find duplicate email addresses in a table.","expected":"GROUP BY email HAVING COUNT(*) > 1"}
+{"id":"coding-081","category":"coding","prompt":"Write a Bash loop that iterates over all .txt files in a directory and echoes their names.","expected":"for file in *.txt; do"}
+{"id":"coding-082","category":"coding","prompt":"Write a Python function to calculate the Levenshtein edit distance between two strings.","expected":"def levenshtein_distance"}
+{"id":"coding-083","category":"coding","prompt":"Write a JavaScript function to format a number as currency in USD.","expected":"Intl.NumberFormat"}
+{"id":"coding-084","category":"coding","prompt":"Write a Python dataclass definition for Product with id, name, and price.","expected":"@dataclass"}
+{"id":"coding-085","category":"coding","prompt":"Write an SQL query to retrieve the Nth row from a table using LIMIT and OFFSET.","expected":"LIMIT 1 OFFSET"}
+{"id":"coding-086","category":"coding","prompt":"Write a Python function to convert an integer to its binary string representation without '0b'.","expected":"bin(n)[2:]"}
+{"id":"coding-087","category":"coding","prompt":"Write a Rust enum with variants for Color (Red, Green, Blue, Custom{r: u8, g: u8, b: u8}).","expected":"enum Color"}
+{"id":"coding-088","category":"coding","prompt":"Write a Python function using multiprocessing to compute squares in parallel.","expected":"multiprocessing.Pool"}
+{"id":"coding-089","category":"coding","prompt":"Write a CSS Grid container rule that creates 3 equal-width columns.","expected":"grid-template-columns: repeat(3, 1fr);"}
+{"id":"coding-090","category":"coding","prompt":"Write an SQL statement to truncate all data from table audit_logs.","expected":"TRUNCATE TABLE audit_logs;"}
+{"id":"coding-091","category":"coding","prompt":"Write a Python function that parses command line arguments using argparse.","expected":"argparse.ArgumentParser"}
+{"id":"coding-092","category":"coding","prompt":"Write a Go struct tag example to map a struct field to a JSON key 'user_id'.","expected":"`json:\"user_id\"`"}
+{"id":"coding-093","category":"coding","prompt":"Write a Python function to validate if parentheses in a string are balanced.","expected":"def is_valid_parentheses"}
+{"id":"coding-094","category":"coding","prompt":"Write a JavaScript function that returns a random integer between min and max inclusive.","expected":"Math.floor(Math.random()"}
+{"id":"coding-095","category":"coding","prompt":"Write an SQL query with a CASE statement classifying score >= 50 as 'Pass' else 'Fail'.","expected":"CASE WHEN score >= 50 THEN 'Pass' ELSE 'Fail' END"}
+{"id":"coding-096","category":"coding","prompt":"Write a Python function to read lines of a large file lazily without loading all into memory.","expected":"with open(filepath) as f:"}
+{"id":"coding-097","category":"coding","prompt":"Write a Git command to stash uncommitted changes including untracked files.","expected":"git stash -u"}
+{"id":"coding-098","category":"coding","prompt":"Write a Python class implementing a Singleton pattern using __new__.","expected":"def __new__(cls)"}
+{"id":"coding-099","category":"coding","prompt":"Write an SQL query to compute the average rating grouped by product_id rounded to 2 decimals.","expected":"ROUND(AVG(rating), 2)"}
+{"id":"coding-100","category":"coding","prompt":"Write a TypeScript mapped type to make all properties in an object readonly.","expected":"type Readonly<T> = { readonly [P in keyof T]: T[P]; }"}
+{"id":"coding-101","category":"coding","prompt":"Write a Python function to find the longest common prefix among an array of strings.","expected":"def longest_common_prefix"}
+{"id":"coding-102","category":"coding","prompt":"Write a Bash command to compress a directory 'mydata' into a tar.gz archive.","expected":"tar -czvf mydata.tar.gz mydata"}
+{"id":"coding-103","category":"coding","prompt":"Write an SQL transaction block inserting into accounts and committing changes.","expected":"BEGIN TRANSACTION; ... COMMIT;"}
+{"id":"coding-104","category":"coding","prompt":"Write a Python function to rotate a list to the right by k steps.","expected":"k = k % len(nums)"}
+{"id":"coding-105","category":"coding","prompt":"Write a JavaScript function implementing array map using reduce.","expected":".reduce((acc, curr)"}
+{"id":"coding-106","category":"coding","prompt":"Write a Python script line to profile code execution using cProfile.","expected":"cProfile.run"}
+{"id":"coding-107","category":"coding","prompt":"Write an SQL query to find employees whose salary is above the average salary of their department.","expected":"WHERE salary > (SELECT AVG"}
+{"id":"coding-108","category":"coding","prompt":"Write a TypeScript discriminated union type for Shape (Circle with radius, Rectangle with width/height).","expected":"kind: 'circle'"}
+{"id":"coding-109","category":"coding","prompt":"Write a Python function to invert the keys and values of a dictionary.","expected":"{v: k for k, v in d.items()}"}
+{"id":"coding-110","category":"coding","prompt":"Write a Dockerfile instruction to set the default entrypoint to python app.py.","expected":"ENTRYPOINT [\"python\", \"app.py\"]"}

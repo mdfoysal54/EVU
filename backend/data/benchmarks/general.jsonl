@@ -1,0 +1,110 @@
+{"id":"general-001","category":"general","prompt":"What is Python?","expected":"Python is a programming language."}
+{"id":"general-002","category":"general","prompt":"What is Docker used for?","expected":"Docker is used for containerizing applications."}
+{"id":"general-003","category":"general","prompt":"Explain what a REST API is.","expected":"A REST API is an architectural style for network-based software."}
+{"id":"general-004","category":"general","prompt":"What is the difference between SQL and NoSQL?","expected":"SQL databases are relational and structured; NoSQL is non-relational."}
+{"id":"general-005","category":"general","prompt":"What is Git?","expected":"Git is a distributed version control system."}
+{"id":"general-006","category":"general","prompt":"What does HTTP stand for?","expected":"Hypertext Transfer Protocol"}
+{"id":"general-007","category":"general","prompt":"What is the primary role of an operating system?","expected":"To manage computer hardware and software resources."}
+{"id":"general-008","category":"general","prompt":"What is cloud computing?","expected":"Delivery of computing services over the internet."}
+{"id":"general-009","category":"general","prompt":"Explain what DNS does.","expected":"DNS translates domain names into IP addresses."}
+{"id":"general-010","category":"general","prompt":"What is caching in computer systems?","expected":"Storing copies of data in a temporary storage location for faster access."}
+{"id":"general-011","category":"general","prompt":"What is the purpose of an API gateway?","expected":"API gateway"}
+{"id":"general-012","category":"general","prompt":"Explain the difference between TCP and UDP.","expected":"connection-oriented"}
+{"id":"general-013","category":"general","prompt":"What is a Content Delivery Network (CDN)?","expected":"distributed servers"}
+{"id":"general-014","category":"general","prompt":"How does symmetric encryption differ from asymmetric encryption?","expected":"public and private keys"}
+{"id":"general-015","category":"general","prompt":"What is the role of a load balancer in system architecture?","expected":"distributes network traffic"}
+{"id":"general-016","category":"general","prompt":"What is Kubernetes and what problem does it solve?","expected":"container orchestration"}
+{"id":"general-017","category":"general","prompt":"Explain the concept of microservices architecture.","expected":"loosely coupled"}
+{"id":"general-018","category":"general","prompt":"What is a monolithic architecture?","expected":"single codebase"}
+{"id":"general-019","category":"general","prompt":"What is Redis typically used for?","expected":"in-memory data store"}
+{"id":"general-020","category":"general","prompt":"Explain the difference between authentication and authorization.","expected":"identity vs permissions"}
+{"id":"general-021","category":"general","prompt":"What is a JSON Web Token (JWT)?","expected":"compact URL-safe token"}
+{"id":"general-022","category":"general","prompt":"What is OAuth 2.0?","expected":"authorization framework"}
+{"id":"general-023","category":"general","prompt":"How does a relational database ensure ACID compliance?","expected":"atomicity, consistency, isolation, durability"}
+{"id":"general-024","category":"general","prompt":"What is database indexing and why is it important?","expected":"speeds up query retrieval"}
+{"id":"general-025","category":"general","prompt":"Explain the purpose of database replication.","expected":"high availability"}
+{"id":"general-026","category":"general","prompt":"What is database sharding?","expected":"horizontal partitioning"}
+{"id":"general-027","category":"general","prompt":"What is message queue technology like RabbitMQ or Kafka used for?","expected":"asynchronous message processing"}
+{"id":"general-028","category":"general","prompt":"What is GraphQL and how does it differ from REST?","expected":"query specific fields"}
+{"id":"general-029","category":"general","prompt":"What is WebSocket protocol used for?","expected":"full-duplex communication"}
+{"id":"general-030","category":"general","prompt":"What is the main function of an operating system kernel?","expected":"core interface between hardware and processes"}
+{"id":"general-031","category":"general","prompt":"What is virtual memory in computer systems?","expected":"memory management technique"}
+{"id":"general-032","category":"general","prompt":"Explain the difference between a process and a thread.","expected":"separate memory space vs shared memory"}
+{"id":"general-033","category":"general","prompt":"What is a deadlock in concurrent programming?","expected":"processes waiting indefinitely"}
+{"id":"general-034","category":"general","prompt":"What is continuous integration (CI)?","expected":"merging code changes frequently"}
+{"id":"general-035","category":"general","prompt":"What is continuous deployment (CD)?","expected":"automatically releasing to production"}
+{"id":"general-036","category":"general","prompt":"What is Git branching used for?","expected":"isolate feature development"}
+{"id":"general-037","category":"general","prompt":"What is the difference between git merge and git rebase?","expected":"combining history"}
+{"id":"general-038","category":"general","prompt":"What is an SSL/TLS certificate?","expected":"authenticates identity and enables encryption"}
+{"id":"general-039","category":"general","prompt":"How does an HTTPS handshake work?","expected":"negotiates encryption keys"}
+{"id":"general-040","category":"general","prompt":"What is CORS in web browsers?","expected":"Cross-Origin Resource Sharing"}
+{"id":"general-041","category":"general","prompt":"What is a reverse proxy?","expected":"server that sits in front of web servers"}
+{"id":"general-042","category":"general","prompt":"What does Nginx do?","expected":"web server and reverse proxy"}
+{"id":"general-043","category":"general","prompt":"What is serverless computing?","expected":"cloud provider manages infrastructure"}
+{"id":"general-044","category":"general","prompt":"What is AWS Lambda?","expected":"event-driven serverless computing platform"}
+{"id":"general-045","category":"general","prompt":"What is object storage like Amazon S3?","expected":"stores unstructured data"}
+{"id":"general-046","category":"general","prompt":"What is a vector database?","expected":"stores high-dimensional embeddings"}
+{"id":"general-047","category":"general","prompt":"What is Elasticsearch used for?","expected":"search and analytics engine"}
+{"id":"general-048","category":"general","prompt":"What is an IP address?","expected":"numerical label assigned to a device"}
+{"id":"general-049","category":"general","prompt":"What is the difference between IPv4 and IPv6?","expected":"32-bit vs 128-bit addresses"}
+{"id":"general-050","category":"general","prompt":"What is DHCP?","expected":"Dynamic Host Configuration Protocol"}
+{"id":"general-051","category":"general","prompt":"What is a subnet mask?","expected":"divides IP address into network and host"}
+{"id":"general-052","category":"general","prompt":"What is a VPN?","expected":"Virtual Private Network"}
+{"id":"general-053","category":"general","prompt":"What is edge computing?","expected":"processing data closer to the source"}
+{"id":"general-054","category":"general","prompt":"What is an SDK?","expected":"Software Development Kit"}
+{"id":"general-055","category":"general","prompt":"What is the difference between a library and a framework?","expected":"inversion of control"}
+{"id":"general-056","category":"general","prompt":"What is semantic versioning (SemVer)?","expected":"major, minor, patch"}
+{"id":"general-057","category":"general","prompt":"What is dependency injection?","expected":"design pattern passing dependencies"}
+{"id":"general-058","category":"general","prompt":"What is Model-View-Controller (MVC)?","expected":"software design pattern"}
+{"id":"general-059","category":"general","prompt":"What is an ORM (Object-Relational Mapping)?","expected":"interact with database using objects"}
+{"id":"general-060","category":"general","prompt":"What is database normalization?","expected":"reducing data redundancy"}
+{"id":"general-061","category":"general","prompt":"What is an foreign key in SQL?","expected":"links two tables together"}
+{"id":"general-062","category":"general","prompt":"What is a primary key?","expected":"uniquely identifies a record"}
+{"id":"general-063","category":"general","prompt":"What is optimistic concurrency control?","expected":"assumes conflicts are rare"}
+{"id":"general-064","category":"general","prompt":"What is pessimistic locking?","expected":"locks records to prevent conflicts"}
+{"id":"general-065","category":"general","prompt":"What is rate limiting?","expected":"controls rate of incoming requests"}
+{"id":"general-066","category":"general","prompt":"What is a circuit breaker pattern in distributed systems?","expected":"prevents cascading service failures"}
+{"id":"general-067","category":"general","prompt":"What is distributed tracing?","expected":"tracks requests across microservices"}
+{"id":"general-068","category":"general","prompt":"What is Prometheus used for?","expected":"monitoring and alerting system"}
+{"id":"general-069","category":"general","prompt":"What is Grafana?","expected":"visualization and metrics dashboard"}
+{"id":"general-070","category":"general","prompt":"What is Infrastructure as Code (IaC)?","expected":"managing infrastructure via code"}
+{"id":"general-071","category":"general","prompt":"What is Terraform?","expected":"infrastructure as code tool"}
+{"id":"general-072","category":"general","prompt":"What is Ansible used for?","expected":"configuration management"}
+{"id":"general-073","category":"general","prompt":"What is a Linux daemon?","expected":"background process"}
+{"id":"general-074","category":"general","prompt":"What is systemd in modern Linux distributions?","expected":"system and service manager"}
+{"id":"general-075","category":"general","prompt":"What is an inode in Unix filesystems?","expected":"data structure storing file metadata"}
+{"id":"general-076","category":"general","prompt":"What is cron used for in Linux?","expected":"scheduling recurring tasks"}
+{"id":"general-077","category":"general","prompt":"What is SSH?","expected":"Secure Shell for remote access"}
+{"id":"general-078","category":"general","prompt":"What is public key authentication in SSH?","expected":"cryptographic key pairs"}
+{"id":"general-079","category":"general","prompt":"What is a Web Application Firewall (WAF)?","expected":"filters HTTP traffic to protect applications"}
+{"id":"general-080","category":"general","prompt":"What is zero trust security?","expected":"never trust, always verify"}
+{"id":"general-081","category":"general","prompt":"What is single sign-on (SSO)?","expected":"single login credential across multiple systems"}
+{"id":"general-082","category":"general","prompt":"What is LDAP?","expected":"Lightweight Directory Access Protocol"}
+{"id":"general-083","category":"general","prompt":"What is a hash function?","expected":"converts input into fixed-length string"}
+{"id":"general-084","category":"general","prompt":"What is salting in password hashing?","expected":"adding random data before hashing"}
+{"id":"general-085","category":"general","prompt":"What is bcrypt?","expected":"password hashing function"}
+{"id":"general-086","category":"general","prompt":"What is the CAP theorem?","expected":"consistency, availability, partition tolerance"}
+{"id":"general-087","category":"general","prompt":"What is eventual consistency?","expected":"data becomes consistent over time"}
+{"id":"general-088","category":"general","prompt":"What is two-phase commit (2PC)?","expected":"distributed transaction protocol"}
+{"id":"general-089","category":"general","prompt":"What is the saga pattern?","expected":"sequence of local transactions"}
+{"id":"general-090","category":"general","prompt":"What is event sourcing?","expected":"stores state changes as sequence of events"}
+{"id":"general-091","category":"general","prompt":"What is CQRS (Command Query Responsibility Segregation)?","expected":"separates read and update operations"}
+{"id":"general-092","category":"general","prompt":"What is garbage collection in programming languages?","expected":"automatic memory management"}
+{"id":"general-093","category":"general","prompt":"What is a memory leak?","expected":"memory allocated but not released"}
+{"id":"general-094","category":"general","prompt":"What is stack memory versus heap memory?","expected":"static allocation vs dynamic allocation"}
+{"id":"general-095","category":"general","prompt":"What is an abstraction layer in software engineering?","expected":"hides implementation complexity"}
+{"id":"general-096","category":"general","prompt":"What is polymorphism in object-oriented programming?","expected":"ability of objects to take on many forms"}
+{"id":"general-097","category":"general","prompt":"What is inheritance in OOP?","expected":"mechanism where child class derives properties"}
+{"id":"general-098","category":"general","prompt":"What is encapsulation in OOP?","expected":"bundling data and methods together"}
+{"id":"general-099","category":"general","prompt":"What does DRY stand for in software engineering?","expected":"Don't Repeat Yourself"}
+{"id":"general-100","category":"general","prompt":"What does SOLID stand for in software design?","expected":"five design principles for maintainable software"}
+{"id":"general-101","category":"general","prompt":"What is technical debt?","expected":"cost of rework caused by choosing fast solutions"}
+{"id":"general-102","category":"general","prompt":"What is regression testing?","expected":"re-running functional tests to ensure changes broke nothing"}
+{"id":"general-103","category":"general","prompt":"What is integration testing?","expected":"testing combined parts of an application"}
+{"id":"general-104","category":"general","prompt":"What is unit testing?","expected":"testing individual units or functions in isolation"}
+{"id":"general-105","category":"general","prompt":"What is end-to-end (E2E) testing?","expected":"testing complete software flow from start to finish"}
+{"id":"general-106","category":"general","prompt":"What is mock data in software testing?","expected":"simulated data used for testing"}
+{"id":"general-107","category":"general","prompt":"What is blue-green deployment?","expected":"release technique using two identical production environments"}
+{"id":"general-108","category":"general","prompt":"What is a canary deployment?","expected":"rolling out changes to a small subset of users"}
+{"id":"general-109","category":"general","prompt":"What is horizontal scaling?","expected":"adding more machines"}
+{"id":"general-110","category":"general","prompt":"What is vertical scaling?","expected":"adding more CPU or RAM to existing machine"}
